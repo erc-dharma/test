@@ -4,7 +4,7 @@
 name: Test display
 
 on:
-  push:
+  push
 
 jobs:
   build:
@@ -20,6 +20,4 @@ jobs:
        - name: Build with Ant
          run: ant -buildfile build1.xml
        - uses: actions/upload-artifact@v2
-         with:
-           name: output-html
-           path: texts/edition-translation
+        
