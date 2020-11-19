@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="display">
+    <xslt basedir="texts/xml" destdir="texts/edition-translation" extension=".html" style="https://raw.githubusercontent.com/erc-dharma/project-documentation/master/stylesheets/inscriptions/start-edition-with-bibl.xsl"/>
+</project>
