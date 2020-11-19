@@ -5,8 +5,6 @@ name: Test display
 
 on:
   push:
-    paths:
-    - 'texts/xml/**'
 
 jobs:
   build:
@@ -23,6 +21,5 @@ jobs:
          run: ant -buildfile build1.xml
        - uses: actions/upload-artifact@v2
          with:
-           name: output
+           name: output-html
            path: texts/edition-translation
-         
