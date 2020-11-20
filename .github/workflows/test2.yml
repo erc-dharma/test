@@ -1,0 +1,14 @@
+name: Test display 2 (bash)
+
+on:
+  push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display the path
+        run: echo build2
+        shell: bash
