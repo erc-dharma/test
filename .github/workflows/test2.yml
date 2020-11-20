@@ -12,3 +12,4 @@ jobs:
       - name: Display the path
         run: echo build2
         shell: bash
+      - uses: actions/upload-artifact@v2
