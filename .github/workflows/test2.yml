@@ -12,4 +12,8 @@ jobs:
       - name: Display the path
         run: echo build2
         shell: bash
-      - uses: actions/upload-artifact@v2
+      - name: Archive html
+        uses: actions/upload-artifact@v2
+        with:
+          name: display
+          path: texts/edition-translation
