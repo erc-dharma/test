@@ -11,4 +11,4 @@ addons:
     - parallel
 script:
   - find $XML_DIRECTORY -name "*.xml" | parallel --gnu --will-cite -X -j8 -u "java -jar validation/jing.jar http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng {}"
-  - find $XML_DIRECTORY -name "*.xml" | grep -w \>\> 
+  - grep -w \>\> $XML_DIRECTORY
