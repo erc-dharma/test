@@ -15,7 +15,7 @@
     </xslt>
     
     <!-- Transformation XML vers HTML -->
-    <xslt force="true" style="project-documentation/stylesheets/inscriptions/start-edition-with-bibl.xsl" destdir="./texts/edition-translation" extension=".html" useImplicitFileset="false" classpath="./validation/saxon9he.jar">    
+    <xslt force="true" style="https://raw.githubusercontent.com/erc-dharma/project-documentation/master/stylesheets/inscriptions/start-edition-with-bibl.xsl" destdir="./texts/edition-translation" extension=".html" useImplicitFileset="false" classpath="./validation/saxon9he.jar">    
         <fileset refid="htmlFiles"/>     
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>       
     </xslt>
