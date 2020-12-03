@@ -20,16 +20,17 @@ jobs:
        - name: Build with Ant
          run: ant -noinput -buildfile build2.xml
 
-# create a package with the resulting files. Great but need to be added to the repo. Let's try with download         
+# create a package with the resulting files.
        - name: Archive html
          uses: actions/upload-artifact@v2
          with:
            name: display
            path: texts/editedxml
 
-       - uses: actions/download-artifact@v2
-         with:
-           path: texts/editedxml
-       - name: downloaded files in the to editedxml folder
-         run: ls -R
-         working-directory: texts/editedxml
+      - uses: actions/checkout@v2
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated"
+          git push
