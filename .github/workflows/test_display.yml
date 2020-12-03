@@ -26,10 +26,10 @@ jobs:
          with:
            name: display
            path: texts/editedxml
-           
+
        - run: |
            git config user.name github-actions
            git config user.email github-actions@github.com
-           git add texts/editedxml
-           git commit -m "generated"
+           git add texts/xml
+           git commit -m "XML files are edited regarding French editorial convention"
            git push
