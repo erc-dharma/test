@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." name="dharma-test">
+    
+    <fileset id="xmlFiles" dir="./texts/xml" includes="*.xml"/>
+    <fileset id="htmlFiles" dir="./texts/editedxml" includes="*.xml"/>   
+    <!-- Probablement à anonymiser pour plus de latitute dans les différentes repo => L'expression **/ permet de désigner tous les sous-répertoires du répertoire défini dans l'attribut dir. -->
+ 
+
+    <!-- Transformation XML vers XML -->
+    <!-- XLST pour gérer les non-breaking spaces en français. Tjrs en test-->
+    <!-- ../codes/DHARMA_nonBreakingSpace_v01.xsl -->
+    <xslt force="true" style="DHARMA_nonBreakingSpace_v01.xsl" destdir="./texts/editedxml" extension=".xml" useImplicitFileset="false" classpath="./validation/saxon9he.jar">
+        <fileset refid="xmlFiles"/>
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+    </xslt>
+    
+    <!-- Transformation XML vers HTML -->
+    <xslt force="true" style="../project-documentation/stylesheets/inscriptions/start-edition-with-bibl.xsl" destdir="./texts/edition-translation" extension=".html" useImplicitFileset="false" classpath="./validation/saxon9he.jar">    
+        <fileset refid="htmlFiles"/>     
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>       
+    </xslt>
+    <!-- supprimer les fichiers résultant des étapes intermédiaires -->
+   
+    <delete dir="./texts/editedxml"/>
+     
+</project>
+
+    
+
+
+    

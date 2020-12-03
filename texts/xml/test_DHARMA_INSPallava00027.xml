@@ -5,7 +5,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Cīyamaṅkalam, time of Mahendravarman I </title>
+            <title>Maṇṭakapaṭṭu, time of Mahendravarman I</title>
             <respStmt>
                <resp>EpiDoc encoding</resp>
                <persName ref="part:emfr">
@@ -24,7 +24,7 @@
          <publicationStmt>
             <authority>DHARMA</authority>
             <pubPlace>Paris, CEIAS</pubPlace>
-            <idno type="filename">DHARMA_INSPallava00029</idno>
+            <idno type="filename">DHARMA_INSPallava00027</idno>
             <availability>
                <licence target="https://creativecommons.org/licenses/by/4.0/">
                   <p>This work is licenced under the Creative Commons Attribution 4.0 Unported
@@ -44,8 +44,8 @@
                   <idno/>
                </msIdentifier>
                <msContents>
-                  <summary>A Sanskrit verse recording the foundation the cave-temple named Avanibhājana-Pallaveśvara by
-							Lalitāṅkura (Mahendravarman I Pallava) around 600/625 CE.</summary>
+                  <summary>A Sanskrit verse recording the foundation of a cave-temple by
+							Vicitracitta (Mahendravarman I Pallava) around 600/625 CE.</summary>
                </msContents>
                <physDesc>
                   <handDesc>
@@ -81,25 +81,25 @@
       </encodingDesc>
       <revisionDesc>
          <change who="part:axja" when="2020-11-03" status="draft">Updating toward the encoding template v03</change>
-         <change who="part:emfr" when="2020-06-24" status="draft">Creation of the file</change>
+         <change who="part:emfr" when="2020-06-26" status="draft">Creation of the file</change>
       </revisionDesc>
    </teiHeader>
    <text xml:space="preserve">
       <body>
 
          <div type="edition" xml:lang="san-Latn">
-         	<lg n="1" met="ārya">
+         	
+         	<lg n="1" met="gīti"><!--Check EGD-->
          		
-            	<l n="ab" real="--+-+-++--+--+-+-+++">
-            		<lb n="1"/>lalitāṃkurena rājñāva
-            		<lb n="2" break="no"/>ni-bhājana-pallaveśvara<orig>n</orig> nāma
-            	</l>
-            	<l n="cd" real="+--++++-+---+-+++">
-            		<lb n="3"/>kāritam etat svedhā-karaṇḍa
-            		<lb n="4" break="no"/>(m) iva puṇya-ratnānām
-            	</l>
-            	
+         		<l n="ab" real="+--+--+---+---+-+-++-">
+         			<lb n="1"/>etad aniṣṭakam adruma<unclear>m</unclear> alo<lb n="2" break="no"/>ham asudhaṃ <unclear>v</unclear>i<unclear>citra</unclear>cittena
+         		</l>
+         		<l n="cd" real="++-+-++++--+-+-+--+">
+         			<lb n="3"/>nirmmāpitan nṛpe<unclear>ṇa</unclear> brahme<lb n="4" break="no"/>śvara-viṣṇu-lakṣitāyatanaM
+         		</l>
+            	            	
             </lg>
+         	
          </div>
 
 <div type="apparatus">
@@ -107,19 +107,19 @@
 	<listApp>
 
 		<app loc="1">
-			<lem>lalitā<unclear>ṃ</unclear>kurena</lem>
-			<rdg source="bib:Hultzsch1900-1901_01">lalitā<unclear>ṃ</unclear>kurena</rdg>
-			<note>The <foreign>anusvāra</foreign> seems to be above the character <foreign>tā</foreign>.</note>
-		</app>		
+			<lem>alo<lb n="2" break="no"/>ham</lem>
+			<rdg source="bib:GopinathaRao1924_01"><unclear>alo</unclear><lb n="2" break="no"/>ham</rdg>
+		</app>	
+		
 		<app loc="2">
-			<lem>°bhājana°</lem>
-			<rdg source="bib:Hultzsch1900-1901_01">°bhāja<unclear>na</unclear>°</rdg>
-		</app>		
-		<app loc="1">
-			<lem>svedhā°</lem>
-			<rdg source="bib:Hultzsch1900-1901_01">sve<choice><sic>dh</sic><corr>cch</corr></choice>ā°</rdg>
-			<note>This correction by Hultzsch might be unnecessary, as we can somehow make sense of the original text.</note>
-		</app>		
+			<lem><unclear>v</unclear>i<unclear>citra</unclear>cittena</lem>
+			<rdg source="bib:GopinathaRao1924_01"><unclear>vicitraci</unclear>ttena</rdg>
+		</app>	
+		
+		<app loc="4">
+			<lem>°lakṣitāyatanaM</lem>
+			<rdg source="bib:GopinathaRao1924_01">°la<unclear>kṣi</unclear>tāyatanaM</rdg>
+		</app>	
 		
 	</listApp>
 
@@ -129,73 +129,73 @@
       		<!--TO BE ADDED-->
       	</div>
       	
-      	<div type="translation" xml:lang="fra" resp="part:sybr"><!--add second translator: part:emfr"-->
-      		<p>
-      			<l>Le roi Lalitāṃkura a fait construire cet édifice nommé Avanibhājana-Pallaveśvara,</l>
-      			<l>Telle une corbeille faite à sa volonté, pour recueillir les joyaux de ses bonnes actions.</l>
+      	<div type="translation" xml:lang="fra" resp="part:sybr part:emfr">
+      		
+      		<p rend="stanza" n="1">
+      			<l>Sans briques, sans bois,</l> 
+      			<l>Sans métal, sans mortier, le roi Vicitracitta,</l>
+      			<l>Fit construire ce temple,</l>
+      			<l>Qui porte les marques de Brahmā, Īśvara et Viṣṇu.</l>
       		</p>
-      		<p>EF: réviser la traduction de svedhā (conservé et non plus émendé en svecchā)? "Telle une corbeille de prospérité (recueillant) les joyaux ..."</p>
+      		
       	</div>
       	
-      	<div type="commentary">
-      		<p n="1-2">Lalitāṅkura and Avanibhājana are <foreign>biruda</foreign>s of the Pallava Mahendravarman I.</p>
-      		<p n="2">Avanibhājanapallaveśvara means "<supplied reason="subaudible">the temple of</supplied> the Lord <supplied reason="explanation">that is, Śiva</supplied> of the Pallava Avanibhājana <supplied reason="explanation">that is, Mahendravarman I Pallava</supplied>", that is, alternatively "<supplied reason="subaudible">the temple of</supplied> Śiva <supplied reason="subaudible">founded by</supplied> the Pallava Avanibhājana".</p>
+      	<div type="commentary"><!--Update!-->
+      		
       	</div>
       	
       	<div type="bibliography">
       		
             <p>
-First edited by <bibl><ptr target="bib:Hultzsch1900-1901_01"/></bibl> (EI 6, no. 32/A); text and summary in <bibl><ptr target="bib:Mahalingam1988_01"/></bibl> (IP no. 29); text and translation in <bibl><ptr target="bib:Filliozat1984_01"/></bibl> and in <bibl><ptr target="bib:Brocquet1997_01"/></bibl> (B no. 24); re-edited here for DHARMA (ERC n° 809994) by Sylvain Brocquet &amp; Emmanuel Francis (2020), based on autopsy and photographs (2019).
+First edited and translated by <bibl><ptr target="bib:GopinathaRao1924_01"/></bibl>, with a poor facsimile (EI 17, no. 5); text and summary in <bibl><ptr target="bib:Mahalingam1988_01"/></bibl> (IP no. 27); text and translation in <bibl><ptr target="bib:Filliozat1984_01"/></bibl> and in <bibl><ptr target="bib:Brocquet1997_01"/></bibl> (B no. 22); re-edited here for DHARMA (ERC n° 809994) by Sylvain Brocquet &amp; Emmanuel Francis (2020), based on autopsy and photographs (2008, 2009).
             </p>
 
       		<listBibl type="primary">
       			
-      			<bibl n="EH">
-      				<ptr target="bib:Hultzsch1900-1901_01"/>
-      				<citedRange unit="page">320</citedRange>
-      				<citedRange unit="item">A</citedRange>
+      			<bibl n="TVGR">
+      				<ptr target="bib:GopinathaRao1924_01"/>            		
       			</bibl>
       			<bibl n="PSF">
       				<ptr target="bib:Filliozat1984_01"/>
-      				<citedRange unit="page">106</citedRange>
+      				<citedRange unit="page">102-104</citedRange>
       			</bibl>
       			<bibl n="TVM">
       				<ptr target="bib:Mahalingam1988_01"/>
-      				<citedRange unit="page">120</citedRange>
-      				<citedRange unit="item">29</citedRange>            		
+      				<citedRange unit="page">117</citedRange>
+      				<citedRange unit="item">27</citedRange>            		
       			</bibl>            	
       			<bibl n="SB">
       				<ptr target="bib:Brocquet1997_01"/>
-      				<citedRange unit="page">480-481</citedRange>
-      				<citedRange unit="item">24</citedRange>            		
+      				<citedRange unit="page">476-477</citedRange>
+      				<citedRange unit="item">22</citedRange>            		
       			</bibl>            	           	
       			
       		</listBibl>
       		
       		<listBibl type="secondary">
-      			      			
-      			<bibl n="ARIE 1889-1900">
-      				<ptr target="bib:ARIE1899-1900"/>
-      				<citedRange unit="page">3, 52</citedRange>
-      				<citedRange unit="appendix">B/1900</citedRange>
-      				<citedRange unit="item">67</citedRange>
+      			
+      			<bibl n="ARIE 1904-1905">
+      				<ptr target="bib:ARIE1904-1905"/>
+      				<citedRange unit="page">33, 39</citedRange>
+      				<citedRange unit="appendix">B/1905</citedRange>
+      				<citedRange unit="item">56</citedRange>      				
       			</bibl>
       			<bibl>
       				<ptr target="bib:Srinivasan1964_01"/>
-      				<citedRange unit="page">91</citedRange>
+      				<citedRange unit="page">47</citedRange>
       			</bibl>
       			<bibl>
       				<ptr target="bib:Francis2013_01"/>
-      				<citedRange unit="page">276</citedRange>
+      				<citedRange unit="page">272</citedRange>
       			</bibl>
       			<bibl>
       				<ptr target="bib:Francis2017_01"/>
-      				<citedRange unit="page">513</citedRange>
+      				<citedRange unit="page">511</citedRange>
       			</bibl>
       		</listBibl>
       		
-         </div>
-
+      	</div>
+      	
       </body>
   </text>
 </TEI>
