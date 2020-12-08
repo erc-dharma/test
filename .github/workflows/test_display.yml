@@ -20,13 +20,21 @@ jobs:
        - name: Build with Ant
          run: ant -noinput -buildfile build2.xml
 
-# create a package with the resulting files.
-       - name: Archive html
+# create a package with the resulting XML files.
+       - name: Archive XML
          uses: actions/upload-artifact@v2
          with:
            name: DHARMA_XMLCollection
            path: texts/editedxml
 
+# create a package with the resulting html files.
+       - name: Archive HTML
+         uses: actions/upload-artifact@v2
+         with:
+           name: DHARMA_XMLCollection
+           path: texts/edition-translation
+
+#remplacer les fichiers XML sources par les nouveaux XML avec l'édition créés en étape intermédiaire
        - run: |
            mv texts/editedxml/*.xml texts/xml
            git config user.name github-actions
@@ -35,6 +43,7 @@ jobs:
            git commit -m "XML files are edited regarding French editorial convention"
            git push
 
+#sauvegarder les hmtls
        - run:  |
            git config user.name github-actions
            git config user.email github-actions@github.com
