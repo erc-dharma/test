@@ -31,7 +31,7 @@ jobs:
        - name: Archive HTML
          uses: actions/upload-artifact@v2
          with:
-           name: DHARMA_XMLCollection
+           name: DHARMA_HTMLCollection
            path: texts/edition-translation
 
 #remplacer les fichiers XML sources par les nouveaux XML avec l'édition créés en étape intermédiaire
