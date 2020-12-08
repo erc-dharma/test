@@ -44,9 +44,9 @@ jobs:
            git push
 
 #sauvegarder les hmtls
-       - run:  |
-           git config user.name github-actions
-           git config user.email github-actions@github.com
-           git add texts/edition-translation
-           git commit -m "HTML files are created"
-           git push
+      # - run:  |
+           #git config user.name github-actions
+           #git config user.email github-actions@github.com
+           #git add texts/edition-translation
+           #git commit -m "HTML files are created"
+           #git push
