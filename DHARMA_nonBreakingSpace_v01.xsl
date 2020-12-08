@@ -6,7 +6,6 @@
     version="2.0">
     
     <xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
-    <xsl:strip-space elements="*"/>
     
     <!-- Identity template -->
     <xsl:template match="@* | node()">
@@ -16,7 +15,7 @@
     </xsl:template>
     
     <!-- Changing the space for a non-breaking space inside the French part. Adding a non-breaking space between the word and the typo when expected -->
-    <xsl:template match="t:div[@xml:lang='fra']/*/text()">
+    <xsl:template match="t:div[@xml:lang='fra']//text()">
         <xsl:if test="matches(., '[\s][;\?!»:]+')">
             <xsl:value-of select="replace(., '[\s]([;\?!»:]+)', '&#160;$1')"/>
         </xsl:if>
