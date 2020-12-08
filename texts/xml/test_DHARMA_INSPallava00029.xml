@@ -129,10 +129,7 @@
       		<!--TO BE ADDED-->
       	</div>
       	
-      	<div type="translation" xml:lang="fra" resp="part:sybr"><!--add second translator: part:emfr"-->
-      		<p><l>Le roi Lalitāṃkura a fait construire cet édifice nommé Avanibhājana-Pallaveśvara,</l><l>Telle une corbeille faite à sa volonté, pour recueillir les joyaux de ses bonnes actions.</l></p>
-      		<p/>
-      	</div>
+      	<div type="translation" xml:lang="fra" resp="part:sybr"><!--add second translator: part:emfr"--><p><l/><l/></p><p/></div>
       	
       	<div type="commentary">
       		<p n="1-2">Lalitāṅkura and Avanibhājana are <foreign>biruda</foreign>s of the Pallava Mahendravarman I.</p>
