@@ -37,14 +37,15 @@ jobs:
 #remplacer les fichiers XML sources par les nouveaux XML avec l'édition créés en étape intermédiaire
 #Ajouter une condition, à faire seulement si nouveaux fichiers XML. Sinon bug.
        - name: Updating the edited texts in the repository
-         run: mv texts/editedxml/*.xml texts/xml
-
-       - name: Solution if previous works
-         if: ${{ ! failure() }}
          run: |
+          mv texts/editedxml/*.xml texts/xml
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add texts/xml
+
+       - name: Solution if previous works
+         if: !failure()
+         run: |
           git commit -m "XML files are edited regarding French editorial convention"
           git push
 
