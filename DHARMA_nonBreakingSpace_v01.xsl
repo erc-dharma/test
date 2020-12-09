@@ -16,8 +16,10 @@
     </xsl:template>
     
     <!-- Changing the space for a non-breaking space inside the French part. Adding a non-breaking space between the word and the typo when expected -->
+    <!-- Adding a quote section to transforme " into  «-->
     <xsl:template match="div[@xml:lang='fra']//text()">
         <xsl:choose>
+            <!-- French non breaking space -->
             <xsl:when test="matches(., '[\s][;\?!»:]+')">
             <xsl:value-of select="replace(., '[\s]([;\?!»:]+)', '&#160;$1')"/>
         </xsl:when>
@@ -30,6 +32,13 @@
         <xsl:when test="matches(., '[«][\w]')">
             <xsl:value-of select="replace(., '([«])([\w])', '$1&#160;$2')"/>
         </xsl:when>
+            <!-- French quotes -->
+            <xsl:when test="matches(., '[\s]&quot;[\w]')">
+                <xsl:value-of select="replace(., '([\s])&quot;([\w])', '$1«$2')"/>
+            </xsl:when>
+            <xsl:when test="matches(., '[\w]&quot;[\s]')">
+                <xsl:value-of select="replace(., '([\w])&quot;([\s])', '$1»$2')"/>
+            </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates/>
             </xsl:otherwise>
