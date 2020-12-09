@@ -43,8 +43,8 @@ jobs:
           git config user.email github-actions@github.com
           git add texts/xml
 
-       - name: Solution if previous works
-         if: !failure()
+       - name: Commit if previous works
+         if: ${{ success() }}
          run: |
           git commit -m "XML files are edited regarding French editorial convention"
           git push
