@@ -34,9 +34,7 @@
     <fileset id="xmlFiles" dir="./texts/xml" includes="*.xml"/>
     <fileset id="htmlFiles" dir="./texts/editedxml" includes="*.xml"/>  
     <!-- Transformation XML vers XML -->
-    <!-- XLST pour gérer les non-breaking spaces en français. Tjrs en test-->
-    <!-- ../codes/DHARMA_nonBreakingSpace_v01.xsl -->
-    <xslt force="true" style="DHARMA_nonBreakingSpace_v01.xsl" destdir="./texts/editedxml" extension=".xml" useImplicitFileset="false" classpath="./validation/saxon9he.jar">
+    <xslt force="true" style="./project-documentation/EditorialStylesheets/tpl-editorialConvention.xsl" destdir="./texts/editedxml" extension=".xml" useImplicitFileset="false" classpath="./validation/saxon9he.jar">
         <fileset refid="xmlFiles"/>
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
     </xslt>
