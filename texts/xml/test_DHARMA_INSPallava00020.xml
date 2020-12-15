@@ -141,7 +141,7 @@ cara mikka ve
            
 	<app loc="1"> 
 		<lem><hi rend="grantha">śrī</hi></lem>
-		<note>We follow here <bibl><ptr target="bib:Hultzsch1913-1914_01"/></bibl> in considering <foreign><hi rend="grantha">śrī</hi></foreign> as an initial benediction. It could alternatively be analysed as a prefix to <foreign>toṇṭai-y-an-tār-vēntaṉ</foreign>, that is "the glorious <supplied reason="explanation"><foreign><hi rend="grantha">śrī</hi></foreign></supplied> king with the beautiful garland of <foreign>toṇṭai</foreign>".</note><!--display issue: Grantha not displayed as bold in <note>.--> <!-- It is because of the order of your encoding. Because of the relationship with <unclear>, you need to put it as <hi rend="grantha"><foreign>śrī</foreign></hi> rather than <foreign><hi rend="grantha">śrī</hi></foreign>. Of course I could change all the priorities order... but I rather not because it could cause major disturbance in the display. let's rediscussed when we are both back for holidays. -->
+		<note>We follow here <bibl><ptr target="bib:Hultzsch1913-1914_01"/></bibl> in considering <foreign><hi rend="grantha">śrī</hi></foreign> as an initial benediction. It could alternatively be analysed as a prefix to <foreign>toṇṭai-y-an-tār-vēntaṉ</foreign>, that is “the glorious <supplied reason="explanation"><foreign><hi rend="grantha">śrī</hi></foreign></supplied> king with the beautiful garland of <foreign>toṇṭai</foreign>".</note><!--display issue: Grantha not displayed as bold in <note>.--> <!-- It is because of the order of your encoding. Because of the relationship with <unclear>, you need to put it as <hi rend="grantha"><foreign>śrī</foreign></hi> rather than <foreign><hi rend="grantha">śrī</hi></foreign>. Of course I could change all the priorities order... but I rather not because it could cause major disturbance in the display. let's rediscussed when we are both back for holidays. -->
 	</app>
 	
 	<app loc="1">
@@ -207,7 +207,7 @@ Fortune ! Le roi à la belle guirlande de <foreign/> (ou : Le glorieux roi à 
 <div type="commentary">
 	<p>See also INSPallava00019<!--update cross-ref-->, a probably earlier Sanskrit foundation inscription of the same cave-temple.</p>
 	<p>Identification of Narēntirappōttaraiyaṉ to be discussed.</p> <!--update!-->
-	<p><lb n="10"/><foreign>āṅku</foreign>: either "there," that is, "here," that is in Veṇpēṭu, or "thus," concluding the verse, that is, "so was it done"</p><!--update!-->
+	<p><lb n="10"/><foreign>āṅku</foreign>: either “there," that is, “here," that is in Veṇpēṭu, or “thus," concluding the verse, that is, “so was it done”</p><!--update!-->
 </div>
       	
 <div type="bibliography">
