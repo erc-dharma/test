@@ -3,12 +3,17 @@ dist: xenial
 language: java
 env:
   - XML_DIRECTORY="texts/xml"
+  - GH_REPO="github.com/erc-dharma/project-documentation.git"
 
 addons:
   apt:
     packages:
     - moreutils
     - parallel
+
+before_script:
+  - git clone git://${GH_REPO}
+
 script:
-  - find $XML_DIRECTORY -name "*.xml" | parallel --gnu --will-cite -X -j8 -u "java -jar validation/jing.jar http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng {}"
-  - find $XML_DIRECTORY -name "*.xml" | grep -r -n \>\> 
+  - find $XML_DIRECTORY -name "*.xml" | parallel --gnu --will-cite -X -j8 -u "java -jar ./project-documentation/schema/validationTools/jing.jar http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng {}"
+  - find $XML_DIRECTORY -name "*.xml" | grep -r -n \>\>

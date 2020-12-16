@@ -34,13 +34,13 @@
     <fileset id="xmlFiles" dir="./texts/xml" includes="*.xml"/>
     <fileset id="htmlFiles" dir="./texts/editedxml" includes="*.xml"/>  
     <!-- Transformation XML vers XML -->
-    <xslt force="true" style="./project-documentation/EditorialStylesheets/tpl-editorialConvention.xsl" destdir="./texts/editedxml" extension=".xml" useImplicitFileset="false" classpath="./validation/saxon9he.jar">
+    <xslt force="true" style="./project-documentation/EditorialStylesheets/tpl-editorialConvention.xsl" destdir="./texts/editedxml" extension=".xml" useImplicitFileset="false" classpath="./project-documentation/EditorialStylesheets/pipelineTools/saxon9he.jar">
         <fileset refid="xmlFiles"/>
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
     </xslt>
     
     <!-- Transformation XML vers HTML -->
-    <xslt force="true" style="./project-documentation/stylesheets/inscriptions/start-edition-with-bibl.xsl" destdir="./texts/edition-translation" extension=".html" useImplicitFileset="false" classpath="./validation/saxon9he.jar">    
+    <xslt force="true" style="./project-documentation/stylesheets/inscriptions/start-edition-with-bibl.xsl" destdir="./texts/edition-translation" extension=".html" useImplicitFileset="false" classpath="./project-documentation/EditorialStylesheets/pipelineTools/saxon9he.jar">    
         <fileset refid="htmlFiles"/>     
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>       
     </xslt>
