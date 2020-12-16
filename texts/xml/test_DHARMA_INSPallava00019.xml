@@ -57,7 +57,7 @@
       <encodingDesc>
          <projectDesc>
             <p>This project DHARMA has received funding from the European Research Council (ERC)
-                        under the European Union's Horizon 2020 research and innovation programme (grant
+                        under the European Union’s Horizon 2020 research and innovation programme (grant
                         agreement no 809994).</p>
          </projectDesc>
          <schemaRef type="guide"
@@ -97,7 +97,7 @@
          			<lb n="2"/>narendreṇaiṣa kāritaḥ
          		</l>
          		<l n="c" real="+--+-+++">
-         			<lb n="3"/>śatrumallena śaile ’smi<orig>N</orig>
+         			<lb n="3"/>śatrumallena śaile’ smi<orig>N</orig>
          		</l>
          		<l n="d" real="+--+-+-+">
          			<lb n="4"/>śatrumalleśvarālayaḥ
@@ -112,8 +112,8 @@
 	<listApp>
 
 		<app loc="1">
-			<lem>’smi<orig>N</orig></lem>
-			<rdg source="bib:Hultzsch1913-1914_01">’smi<choice><sic>n</sic><corr>ñ</corr></choice></rdg>
+			<lem>’ smi<orig>N</orig></lem>
+			<rdg source="bib:Hultzsch1913-1914_01">’ smi<choice><sic>n</sic><corr>ñ</corr></choice></rdg>
 			<note/>
 		</app>	
 		

@@ -58,7 +58,7 @@
       <encodingDesc>
          <projectDesc>
             <p>This project DHARMA has received funding from the European Research Council (ERC)
-                        under the European Union's Horizon 2020 research and innovation programme (grant
+                        under the European Union’s Horizon 2020 research and innovation programme (grant
                         agreement no 809994).</p>
          </projectDesc>
          <schemaRef type="guide"
@@ -141,7 +141,7 @@ cara mikka ve
            
 	<app loc="1"> 
 		<lem><hi rend="grantha">śrī</hi></lem>
-		<note>We follow here <bibl><ptr target="bib:Hultzsch1913-1914_01"/></bibl> in considering <foreign><hi rend="grantha">śrī</hi></foreign> as an initial benediction. It could alternatively be analysed as a prefix to <foreign>toṇṭai-y-an-tār-vēntaṉ</foreign>, that is “the glorious <supplied reason="explanation"><foreign><hi rend="grantha">śrī</hi></foreign></supplied> king with the beautiful garland of <foreign>toṇṭai</foreign>".</note><!--display issue: Grantha not displayed as bold in <note>.--> <!-- It is because of the order of your encoding. Because of the relationship with <unclear>, you need to put it as <hi rend="grantha"><foreign>śrī</foreign></hi> rather than <foreign><hi rend="grantha">śrī</hi></foreign>. Of course I could change all the priorities order... but I rather not because it could cause major disturbance in the display. let's rediscussed when we are both back for holidays. -->
+		<note>We follow here <bibl><ptr target="bib:Hultzsch1913-1914_01"/></bibl> in considering <foreign><hi rend="grantha">śrī</hi></foreign> as an initial benediction. It could alternatively be analysed as a prefix to <foreign>toṇṭai-y-an-tār-vēntaṉ</foreign>, that is “the glorious <supplied reason="explanation"><foreign><hi rend="grantha">śrī</hi></foreign></supplied> king with the beautiful garland of <foreign>toṇṭai</foreign>".</note><!--display issue: Grantha not displayed as bold in <note>.--> <!-- It is because of the order of your encoding. Because of the relationship with <unclear>, you need to put it as <hi rend="grantha"><foreign>śrī</foreign></hi> rather than <foreign><hi rend="grantha">śrī</hi></foreign>. Of course I could change all the priorities order... but I rather not because it could cause major disturbance in the display. let's rediscussed when we are both back for holidays. -->
 	</app>
 	
 	<app loc="1">
@@ -170,8 +170,8 @@ cara mikka ve
 	
 	<app loc="9">
 		<lem><unclear>eṉṟ’ ara</unclear>ṉukk’</lem>
-		<rdg source="bib:Hultzsch1913-1914_01">eṉṟ' araṇukk'</rdg>
-		<rdg source="bib:Mahalingam1988_01">eṉṟ' araṇukk'</rdg>
+		<rdg source="bib:Hultzsch1913-1914_01">eṉṟ’ araṇukk’</rdg>
+		<rdg source="bib:Mahalingam1988_01">eṉṟ’ araṇukk’</rdg>
 	</app>
 	
 	<app loc="10">
@@ -202,7 +202,7 @@ Prosperity! The king <supplied reason="subaudible">who wore</supplied> a beautif
 </div>
       	
 <div type="translation" xml:lang="fra" resp="part:emfr"><div type="textpart" subtype="face" n="A"><head xml:lang="eng"/><p n="1-10">
-Fortune ! Le roi à la belle guirlande de <foreign/> (ou : Le glorieux roi à la belle guirlande de <foreign/>), le roi-Pallava (ou : le roi-taureau) <supplied reason="explanation"><foreign/></supplied><supplied reason="explanation"/><supplied reason="explanation"><foreign/>, littéralement : a supervisé</supplied><supplied reason="explanation"/><supplied reason="explanation"><foreign/></supplied><supplied reason="explanation"><foreign/></supplied><supplied reason="explanation"/></p></div><div type="textpart" subtype="face" n="B"><head xml:lang="eng"/><p n="11-15"><supplied reason="explanation"><foreign/>, littéralement : ce qu'a dit</supplied><supplied reason="explanation"/></p></div></div>
+Fortune ! Le roi à la belle guirlande de <foreign/> (ou : Le glorieux roi à la belle guirlande de <foreign/>), le roi-Pallava (ou : le roi-taureau) <supplied reason="explanation"><foreign/></supplied><supplied reason="explanation"/><supplied reason="explanation"><foreign/>, littéralement : a supervisé</supplied><supplied reason="explanation"/><supplied reason="explanation"><foreign/></supplied><supplied reason="explanation"><foreign/></supplied><supplied reason="explanation"/></p></div><div type="textpart" subtype="face" n="B"><head xml:lang="eng"/><p n="11-15"><supplied reason="explanation"><foreign/>, littéralement : ce qu’a dit</supplied><supplied reason="explanation"/></p></div></div>
       	
 <div type="commentary">
 	<p>See also INSPallava00019<!--update cross-ref-->, a probably earlier Sanskrit foundation inscription of the same cave-temple.</p>
