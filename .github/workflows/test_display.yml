@@ -38,13 +38,13 @@ jobs:
 
        - name: Updating the edited texts in the repository
          run: |
-      #mv texts/editedxml/*.xml texts/xml
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add texts/xml
           git commit -m "XML files are edited regarding editorial conventions"
           git push
 
+   # mv texts/editedxml/*.xml texts/xml
 
 #sauvegarder les hmtls
       # - run:  |
