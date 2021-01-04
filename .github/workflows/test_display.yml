@@ -34,7 +34,7 @@ jobs:
          uses: actions/upload-artifact@v2
          with:
            name: DHARMA_HTMLCollection
-           path: texts/edition-translation
+           path: texts/htmloutput
 
        - name: Updating the edited texts in the repository
          run: |
