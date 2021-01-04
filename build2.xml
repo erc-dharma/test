@@ -47,7 +47,7 @@
     
     <!-- Ajouter un attribut dans le nom de fichier de la verison editée et temporaire de l'xml -->
     <copy todir="./texts/editedxml" verbose="true" overwrite="true">
-        <fileset refid="htmlFiles"/>
+        <fileset dir="./texts/editedxml" includes="*.xml"/>
         <regexpmapper from="(.*)" to="EDITED_\1"/>
     </copy>     
     <!-- supprimer les fichiers résultant des étapes intermédiaires -->
