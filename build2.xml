@@ -28,44 +28,28 @@
         </sequential>
     </macrodef>
 
-    <!-- Adding a scriptDef to change a file name -->
-    <scriptdef name="filedate" language="javascript">
-        <attribute name="file"/>
-        <attribute name="property"/>
-            <![CDATA[
-                file_name = attributes.get("file");
-                property_to_set = attributes.get("property");
-
-                file = new java.io.File(file_name);
-                file_date = file.lastModified();
-
-                date_format = new java.text.SimpleDateFormat("yyyy-MM-dd");
-                formated_date = date_format.format(new java.util.Date(file_date));
-                project.setProperty(property_to_set, formated_date);
-            ]]>
-    </scriptdef>
-
     <!-- git clone then pull -->
     <git-clone-pull repository="git://github.com/erc-dharma/project-documentation.git" dest="project-documentation" />
 
     <fileset id="xmlFiles" dir="./texts/xml" includes="*.xml"/>
     <fileset id="htmlFiles" dir="./texts/editedxml" includes="*.xml"/>
-    <!-- Transformation XML vers XML -->
+    <!-- Transformation XML vers XML avec editiorialisation -->
     <xslt force="true" style="./project-documentation/EditorialStylesheets/tpl-editorialConvention.xsl" destdir="./texts/editedxml" extension=".xml" useImplicitFileset="false" classpath="./project-documentation/EditorialStylesheets/pipelineTools/saxon9he.jar">
         <fileset refid="xmlFiles"/>
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <file.mdate
-    file="${file.name}"
-    property="file.modified.date"/>
-    <echo>The file "${file}" was modified on ${file.modified.date}</echo>
     </xslt>
-
+   
     <!-- Transformation XML vers HTML -->
     <xslt force="true" style="./project-documentation/stylesheets/inscriptions/start-edition-with-bibl.xsl" destdir="./texts/htmloutput" extension=".html" useImplicitFileset="false" classpath="./project-documentation/EditorialStylesheets/pipelineTools/saxon9he.jar">
         <fileset refid="htmlFiles"/>
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
     </xslt>
-
+    
+    <!-- Ajouter un attribut dans le nom de fichier de la verison editée et temporaire de l'xml -->
+    <move file="file.orig" tofile="file.moved">
+        <fileset refid="htmlFiles"/>
+        <regexpmapper from="(.*)" to="EDITED_\1"/>
+    </move>
     <!-- supprimer les fichiers résultant des étapes intermédiaires -->
     <!--<delete dir="./texts/editedxml"/>-->
 
