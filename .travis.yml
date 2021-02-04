@@ -15,7 +15,7 @@ before_script:
 
 script:
   - find $XML_DIRECTORY -name "*.xml" | parallel --gnu --will-cite -X -j8 -u "java -jar ./project-documentation/schema/validationTools/jing.jar http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng {}"
-  - find $XML_DIRECTORY -name "*.xml" | parallel --gnu --will-cite -X -j8 -u "java -jar ./project-documentation/schema/validationTools/jing.jar ./project-documentation/master/schema/latest/DHARMA_Schema.rng {}"
-  - find $XML_DIRECTORY -name "*.xml" | parallel --gnu --will-cite -X -j8 -u "java -jar ./project-documentation/blob/master/EditorialStylesheets/pipelineTools/saxon9he.jar com.saxonica.Validate -xsd:./project-documentation/master/schema/latest/DHARMA_SQF.sch"
+  - find $XML_DIRECTORY -name "*.xml" | parallel --gnu --will-cite -X -j8 -u "java -jar ./project-documentation/schema/validationTools/jing.jar ./project-documentation/schema/latest/DHARMA_Schema.rng {}"
+  - find $XML_DIRECTORY -name "*.xml" | parallel --gnu --will-cite -X -j8 -u "java -jar ./project-documentation/EditorialStylesheets/pipelineTools/saxon9he.jar com.saxonica.Validate -xsd:./project-documentation/schema/latest/DHARMA_SQF.sch"
 
   #- find $XML_DIRECTORY -name "*.xml" | grep -r -n \>\>
