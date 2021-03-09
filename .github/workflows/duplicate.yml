@@ -3,10 +3,9 @@ name: Duplicate code
 on: push
 
 jobs:
-  run:
-    name: Check for duplicate files
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: running script
+      - name: Check for duplicate files
         run: ./duplicate.sh
