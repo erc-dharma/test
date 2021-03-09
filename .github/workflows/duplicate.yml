@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v1
       - name: Check for duplicate files
         run: |
-         if ./duplicate.sh; then
+         if [./duplicate.sh]; then
             echo ::set-env name=HAVE_FILE::true
          fi
       - run: echo "I have file!"
