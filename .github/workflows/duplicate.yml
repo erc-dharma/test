@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: running script
-        run: .github/duplicate.sh
+        run: ./duplicate.sh
