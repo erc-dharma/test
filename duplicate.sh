@@ -5,3 +5,5 @@ while read fileName
 do
 find $dirname -type f | grep "$fileName"
 done
+
+echo "::set-output name=duplicate_filename::$fileName"

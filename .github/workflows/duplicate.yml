@@ -8,9 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Check for duplicate files
-        run: |
-         if [./duplicate.sh]; then
-            echo ::set-env name=HAVE_FILE::true
-         fi
-      - run: echo "I have file!"
-        if:  env.HAVE_FILE == 'true'
+        run: ./duplicate.sh
+        id: duplicate
+      - name: Get the filenames
+        run: echo "${{ steps.duplicate.outputs.duplicate_filename }}"
