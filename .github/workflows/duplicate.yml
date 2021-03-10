@@ -14,6 +14,6 @@ jobs:
       - name: Get the filenames
         run: echo "${{ steps.duplicate.outputs.duplicate_filename }}"
         id : getName
-      - name: Check on failures
-        run: exit 1
-        if: steps.getName.status == '0'
+#  - name: Check on failures
+#        run: exit 1
+#        if: steps.getName.status == '0'-->
