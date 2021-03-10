@@ -16,5 +16,5 @@ jobs:
         id : getName
         if:  steps.duplicate.outputs.duplicate_filename != '0'
       - name: Check on failures
-        if: steps.getName.status == success()
         run: exit 1
+        if: steps.getName.status == '0'
