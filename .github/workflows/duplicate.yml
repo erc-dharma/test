@@ -12,9 +12,9 @@ jobs:
         id: duplicate
         shell: bash
       - name: Get the filenames
-        run: echo "${{ steps.duplicate.outputs.duplicate_filename }}"
+        run: echo "There seems to have a doublon. ${{ steps.duplicate.outputs.duplicate_filename }}"
         id : get-name
-        if:  steps.duplicate.outputs.duplicate_filename == 'true'
+        if:  steps.duplicate.outputs.duplicate_filename != '0'
       - name: Check on failures
-        if: job.steps.get-name.status == failure()
+        if: job.steps.get-name.status == success()
         run: exit 1
