@@ -8,7 +8,16 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Check for duplicate files
-        run: ./duplicate.sh
+        run: |
+        echo ::set-output name=duplicate_filename::$(
+        dirname=./texts/xml
+        find $dirname -type f | sed 's_.*/__' | sort|  uniq -d|
+        while read fileName
+        do
+        find $dirname -type f | grep "$fileName"
+        done)
         id: duplicate
+        shell: bash
       - name: Get the filenames
-        run: echo "${{ steps.duplicate.outputs.duplicate_filename }}"
+        run: echo "There seems to have a doublon. ${{ steps.duplicate.outputs.duplicate_filename }}"
+        if:  steps.duplicate.outputs.duplicate_filename != '0'
