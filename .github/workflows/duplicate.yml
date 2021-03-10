@@ -13,4 +13,5 @@ jobs:
         shell: bash
       - name: Get the filenames
         run: echo "${{ steps.duplicate.outputs.duplicate_filename }}"
-        if:  needs.duplicate.outputs.duplicate_filename
+        id : get-name
+        if:  steps.duplicate.outputs.duplicate_filename == 'true'
