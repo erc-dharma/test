@@ -15,3 +15,6 @@ jobs:
         run: echo "${{ steps.duplicate.outputs.duplicate_filename }}"
         id : get-name
         if:  steps.duplicate.outputs.duplicate_filename == 'true'
+      - name: Check on failures
+        if: job.steps.get-name.status == failure()
+        run: exit 1
