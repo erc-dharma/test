@@ -12,5 +12,5 @@ jobs:
         id: duplicate
         shell: bash
       - name: Get the filenames
-        run: echo "There seems to have a doublon. ${{ steps.duplicate.outputs.duplicate_filename }}"
-        if:  steps.duplicate.outputs.duplicate_filename != '0'
+        run: echo "${{ steps.duplicate.outputs.duplicate_filename }}"
+        if:  steps.duplicate.outputs.duplicate_filename == './texts/xml' 
