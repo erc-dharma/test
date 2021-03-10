@@ -12,7 +12,7 @@ jobs:
         id: duplicate
         shell: bash
       - name: Get the filenames
-        run: echo "There seems to have a doublon. ${{ steps.duplicate.outputs.duplicate_filename }}"
+        run: echo "${{ steps.duplicate.outputs.duplicate_filename }}"
         id : getName
         if:  steps.duplicate.outputs.duplicate_filename != '0'
       - name: Check on failures
