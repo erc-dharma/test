@@ -40,23 +40,20 @@
     var idx = lunr(function () {
       this.field('id');
       this.field('title', { boost: 10 });
-      this.field('author');
-      this.field('category');
-      this.field('content');
+      this.field('description');
+      this.field('url');
 
-      // Add data to lunr
-      for (var key in window.store) {
-        this.add({
-          'id': key,
-          'title': window.store[key].title,
-          'author': window.store[key].author,
-          'category': window.store[key].category,
-          'content': window.store[key].content
-        });
-      }
-    });
-
-    var results = idx.search(searchTerm); // Get lunr to perform a search
-    displaySearchResults(results, window.store); // We'll write this in the next section
+    for (var key in window.store) { // Add the data to lunr
+      this.add({
+        'id': key,
+        'title': window.store[key].title,
+        'description': window.store[key].description,
+        'url': window.store[key].url
+      });
+}
+});
+      var results = idx.search(searchTerm); // Get lunr to perform a search
+      displaySearchResults(results, window.store); // We'll write this in the next section
+    }
   }
 })();
