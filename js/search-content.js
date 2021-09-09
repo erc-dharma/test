@@ -1,9 +1,9 @@
 ---
-permalink: /assets/js/search-content.js
+permalink: /js/search-content.js
 ---
 window.store = {
   {% assign searchable_pages = site.pages | where_exp: "page", "page.menu == 'main'" %}
-  {% assign searchable_documents = site.documents %}
+  {% assign searchable_documents = site.documentation %}
   {% for page in searchable_pages %}
     {% assign searchable_documents = searchable_documents | push: page %}
   {% endfor %}
