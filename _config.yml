@@ -1,6 +1,6 @@
 # Config settings
 title: ARIE Inscriptions
 baseurl: "/repo-test"
-collection:
-  - documentation:
+collections:
+  documentation:
     output: true
