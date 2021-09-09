@@ -14,8 +14,7 @@ layout: search
     {% for document in site.documentation %}
       "{{ document.url | slugify }}": {
         "title": "{{ document.title | xml_escape }}",
-        "author": "{{ document.author | xml_escape }}",
-        "category": "{{ document.category | xml_escape }}",
+        "description": "{{ document.description | xml_escape }}",
         "content": {{ document.content | strip_html | strip_newlines | jsonify }},
         "url": "{{ document.url | xml_escape }}"
       }
