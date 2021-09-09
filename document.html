@@ -8,7 +8,7 @@ title: document
 	<div class="blog-posts">
 		{% for document in site.documentation %}
 			<div class="spacing">
-				<h3><a href="{{ document.url }}">{{ document.title }}</a></h3>
+				<h3><a href="{{site.baseurl}}{{ document.url }}">{{ document.title }}</a></h3>
 				{{ document.excerpt }}
 			</div>
 		{% endfor %}

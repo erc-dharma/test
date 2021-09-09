@@ -16,7 +16,7 @@ layout: search
         "title": "{{ document.title | xml_escape }}",
         "description": "{{ document.description | xml_escape }}",
         "content": {{ document.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ site.baseurl | document.url | xml_escape }}"
+        "url": "{{site.baseurl}}{{document.url | xml_escape }}"
       }
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
