@@ -11,7 +11,7 @@ layout: default
                        <p>Reference pattern used in the files: ARIE/Publication_Year/Appendix_Letter/Appendix_Year/Inscription_Number (page Page_Number)</p>
                         <ul id="list" class="list-group">
 													{% for document in site.documentation %}
-  													<li><a href="{{ document.url }}">{{ document.title }}</a></li>
+  													<li><a href="{{ site.baseurl | document.url }}">{{ document.title }}</a></li>
 														{% endfor %}
                         </ul>
                     </div>
