@@ -1,0 +1,16 @@
+---
+layout: default
+title: document
+---
+<div class="container">
+	<h2 class="spacing">Blog</h2>
+
+	<div class="blog-posts">
+		{% for document in site.documentation %}
+			<div class="spacing">
+				<h3><a href="{{ document.url }}">{{ document.title }}</a></h3>
+				{{ document.excerpt }}
+			</div>
+		{% endfor %}
+	</div>
+</div>
