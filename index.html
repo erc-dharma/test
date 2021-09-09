@@ -10,9 +10,9 @@ layout: default
                         </h1>
                        <p>Reference pattern used in the files: ARIE/Publication_Year/Appendix_Letter/Appendix_Year/Inscription_Number (page Page_Number)</p>
                         <ul id="list" class="list-group">
-													{% for doc in site.documentation %}
-  <li>{{ doc.title }}</li>
-{% endfor %}
+													{% for document in site.documentation %}
+  													<li>{{ docdocument.title }}</li>
+														{% endfor %}
                         </ul>
                     </div>
                 </div>
