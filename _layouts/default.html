@@ -84,11 +84,12 @@
                             <a class="nav-link" href="https://www.zotero.org/groups/1633743/erc-dharma/library">Zotero Library</a>
                         </li>
                     </ul>
-										<form action="{{ site.baseurl }}/search.html" method="get">
-										  <label for="search-box">Search</label>
-										  <input type="text" id="search-box" name="query">
-										  <input type="submit" value="search">
-										</form>
+										<div class="searchForm">
+      <form id="searchForm">
+        <input type="text" placeholder="Search" id="searchField" />
+        <input type="submit" value="Search!" id="searchButton" />
+      </form>
+    </div>
                 </div>
             </nav>
 			</div>
@@ -112,5 +113,6 @@
 				<p class="center-text"> <a href="https://github.com/erc-dharma">Created by DHARMA</a></p>
 			</div>
 		</footer>
+		<script src="/js/lunr.js"></script>
 	</body>
 </html>

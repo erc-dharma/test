@@ -3,13 +3,12 @@ layout: default
 title: Home
 ---
 
-<div class="container">
-	<form action="{{ site.baseurl }}/search.html" method="get">
-		<label for="search_box">Search</label>
-		<input type="text" id="search_box" name="query">
-		<input type="submit" value="search">
-	</form>
-</div>
+<div class="searchForm">
+      <form id="searchForm">
+        <input type="text" placeholder="Search" id="searchField" />
+        <input type="submit" value="Search!" id="searchButton" />
+      </form>
+    </div>
 
 <script>
 					(async () => {
@@ -24,3 +23,4 @@ title: Home
 			 document.getElementById('list').innerHTML = htmlString;
 		 })()
 	 </script>
+<script src="/js/lunr.js"></script>
