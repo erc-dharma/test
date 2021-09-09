@@ -1,11 +1,12 @@
 ---
 layout: search
 ---
-<form action="{{ site.baseurl }}/search.html" method="get">
-  <label for="search-box">Search</label>
-  <input type="text" id="search-box" name="query">
-  <input type="submit" value="search">
-</form>
+<div class="searchForm">
+      <form id="searchForm">
+        <input type="text" placeholder="Search" id="searchField" />
+        <input type="submit" value="Search!" id="searchButton" />
+      </form>
+    </div>
 
 <ul id="search-results"></ul>
 
