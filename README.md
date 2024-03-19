@@ -1,2 +1,0 @@
-# arie
-DHARMA ARIE repository 
