@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
+<teiHeader>
+    <fileDesc>
+        <titleStmt>
+            <title>Test</title>
+            <respStmt>
+                <resp>so many</resp>
+                <persName ref="part:mime">
+                    <forename>Michaël</forename>
+                    <surname>Meyer</surname>
+                </persName>
+            </respStmt>
+        </titleStmt>
+        <publicationStmt>
+            <authority>DHARMA</authority>
+            <pubPlace>Paris</pubPlace>
+        </publicationStmt>
+        <sourceDesc>
+            <msDesc>
+                <msIdentifier>
+                    <repository>DHARMAbase</repository>
+                    <idno/>
+                </msIdentifier>
+            </msDesc>
+        </sourceDesc>
+    </fileDesc>
+</teiHeader>
+<text xml:space="preserve">
+    <body>			
+
+<div type="edition" xml:lang="eng">
+<div type="textpart" n="A">
+<head>Lists</head>
+    
+<p>   
+Here is a plain list:
+<list>
+    <item>Tomate</item>
+    <item>Orange</item>
+    <item>Citron</item>
+    <item><list>
+        <item>Banane</item>
+        <item>Groseille</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </item>
+    </list></item>
+    <item>Pastèque</item>
+    <item>Melon</item>
+    <item>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </item>
+</list>
+
+Another one, with an explicit @rend=plain:
+
+<list rend="plain">
+    <item>Tomate</item>
+    <item>Orange</item>
+    <item>Citron</item>
+</list>
+</p>
+    
+<p>
+Here is a bulleted list:
+<list rend="bulleted">
+    <item>Tomate</item>
+    <item>Orange</item>
+    <item>Citron</item>
+    <item><list rend="bulleted">
+        <item>Banane</item>
+        <item>Groseille</item>
+        <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+    </list></item>
+    <item>Pastèque</item>
+    <item>Melon</item>
+    <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
+</list>
+</p>
+    
+<p>
+Here is a numbered list:
+<list rend="numbered">
+    <item>Tomate</item>
+    <item>Orange</item>
+    <item>Citron</item>
+    <item><list rend="numbered">
+        <item>Banane</item>
+        <item>Groseille</item>
+        <item>Raisin</item>
+    </list></item>
+    <item>Pastèque</item>
+    <item>Melon</item>
+</list>
+</p>
+   
+<p>
+Here is a definition list:
+<list>
+    <label>Légume</label><item>Tomate</item>
+    <label>Fruit</label><item>Orange</item>
+    <label>Fruit</label><item>Citron</item>
+    <label>Sublist</label><item><list>
+        <label>Fruit</label><item>Banane</item>
+        <label>Fruit</label><item>Groseille</item>
+        <label>Fruit</label><item>Raisin</item>
+    </list></item>
+    <label>Fruit</label><item>Pastèque</item>
+    <label>Fruit</label><item>Melon</item>
+</list>
+
+Another definition list, with an explicit @rend=description:
+
+<list rend="description">
+    <label>Légume</label><item>Tomate</item>
+    <label>Fruit</label><item>Orange</item>
+    <label>Fruit</label><item>Citron</item>
+</list>
+</p>
+</div>
+    
+<div type="textpart" n="B">
+<head>Spaces</head>
+
+<p><lb n="1"/>_</p>
+<p><lb n="1"/><space/></p>
+<p><lb n="1"/><space quantity="1" unit="character"/></p>
+<p><lb n="1"/><space quantity="2" unit="character"/></p>
+<p><lb n="1"/><space quantity="3" unit="character"/></p>
+
+<p><lb n="2"/><space type="unclassified"/></p>
+<p><lb n="2"/><space type="unclassified" quantity="1" unit="character"/></p>
+<p><lb n="2"/><space type="unclassified" quantity="2" unit="character"/></p>
+<p><lb n="2"/><space type="unclassified" quantity="3" unit="character"/></p>
+
+<p><lb n="3"/><space type="vacat"/></p>
+<p><lb n="3"/><space type="vacat" quantity="1" unit="character"/></p>
+<p><lb n="3"/><space type="vacat" quantity="2" unit="character"/></p>
+<p><lb n="3"/><space type="vacat" quantity="3" unit="character"/></p>
+
+<p><lb n="4"/><space type="binding-hole"/></p>
+<p><lb n="4"/><space type="descender"/></p>
+<p><lb n="4"/><space type="ascender"/></p>
+<p><lb n="4"/><space type="defect"/></p>
+<p><lb n="4"/><space type="feature"/></p>
+ 
+</div>
+    
+</div>
+	</body>
+</text>
+</TEI>
