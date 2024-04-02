@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Test Gaiji</title>
+                <respStmt>
+                    <resp>so many</resp>
+                    <persName ref="part:mime">
+                        <forename>Michaël</forename>
+                        <surname>Meyer</surname>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>DHARMA</authority>
+                <pubPlace>Paris</pubPlace>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>DHARMAbase</repository>
+                        <idno/>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:space="preserve"><body>			
+
+<div type="edition" xml:lang="san">
+<p>
+    <g type="numeral">34</g>
+    <g type="numeral">3/4</g>
+    <g type="floret"></g>
+    <g type="floret">.</g>
+    <g type="floret">§</g>
+    <g type="floret">§§§</g>
+    <g type="myUnknownSymbol"></g>
+    <g type="myUnknownSymbol">.</g>
+    <g type="myUnknownSymbol">§</g>
+    <g type="myUnknownSymbol">§§§</g>
+</p>
+</div>
+    
+    </body></text>
+</TEI>
