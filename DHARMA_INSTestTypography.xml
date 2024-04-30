@@ -31,7 +31,7 @@
 <text xml:space="preserve">
     <body>			
 
-<div type="edition" xml:lang="eng">
+<div type="edition" xml:lang="eng" rendition="class:00000 maturity:00000">
 <div type="textpart" n="A">
 <head>Lists</head>
     
@@ -122,6 +122,44 @@ Another definition list, with an explicit @rend=description:
 </div>
     
 <div type="textpart" n="B">
+<head>Quotations</head>
+    
+<p>There are two elements "q" and "quote" for quotations. We treat them identically.</p>
+    
+<p>This is an inline quote: <q>hello world</q>.</p>
+<p>This is an inline quote: <quote>hello world</quote>.</p>
+    
+<p>This is a block quote:
+    <quote rend="block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</quote>
+</p>
+    
+<p>This is a block quote:
+    <q rend="block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</q>
+</p>
+    
+<p>This is an inline quotation: <cit><quote>Hello world</quote>
+    <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
+</cit>.
+</p>
+    
+<p>This is an inline quotation: <cit><q>Hello world</q>
+    <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
+</cit>.
+</p>
+    
+<p>This is a block quotation: <cit><quote rend="block">Hello world.</quote>
+    <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
+</cit>
+</p>
+
+<p>This is a block quotation: <cit><q rend="block">Hello world.</q>
+    <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
+</cit>
+</p>
+    
+</div>
+    
+<div type="textpart" n="C">
 <head>Spaces</head>
 
 <p><lb n="1"/>_</p>
