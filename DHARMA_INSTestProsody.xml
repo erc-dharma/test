@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Test Verse</title>
+                <respStmt>
+                    <resp>so many</resp>
+                    <persName ref="part:mime">
+                        <forename>Michaël</forename>
+                        <surname>Meyer</surname>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>DHARMA</authority>
+                <pubPlace>Paris</pubPlace>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>DHARMAbase</repository>
+                        <idno/>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:space="preserve"><body>			
+
+<div type="edition" xml:lang="san" rendition="class:00000 maturity:00000">
+
+<div type="textpart" n="A"><head>lg element</head>
+    
+<lg n="1" met="foo">
+    <l n="a">one</l>
+    <l n="b">two</l>
+    <l n="c">three</l>
+    <l n="d">four</l>
+</lg>
+
+<p>When there are more than 4 l elements, we start numbering them</p>
+
+<lg n="1" met="foo">
+    <l n="a">one</l>
+    <l n="b">two</l>
+    <l n="c">three</l>
+    <l n="d">four</l>
+    <l n="e">five</l>
+</lg>
+
+<lg n="1" met="foo">
+    <l n="a">one</l>
+    <l n="b">two</l>
+    <l n="c">three</l>
+    <l n="d">four</l>
+    <l n="e">five</l>
+    <l n="f">six</l>
+    <l n="g">seven</l>
+    <l n="h">eight</l>
+    <l n="i">nine</l>
+    <l n="j">ten</l>
+    <l n="k">eleven</l>
+    <l n="l">twelve</l>
+</lg>    
+    
+</div>
+    
+<div type="textpart" n="B"><head>Use of @met with lg</head>
+
+<lg n="1" met="anuṣṭubh">
+    <l>The meter appears in prosody, should have a clickable link to the prosody page
+    as well as a tooltip that gives the meter's prosodic pattern. In the present case,
+    we have a prosodic pattern (seg[@type='prosody'])</l>
+</lg>
+<lg n="1" met="lalitā">
+    <l>This meter does not have a seg[@type='prosody'], but does have a seg[@type='xml'].
+    In this case, this last value is used as a fallback.</l>
+</lg>
+<lg n="1" met="trimeter">
+    <l>This meter does not have any pattern. In this case, we still add a link to the
+    prosody table, but we do not show anything in the tooltip.</l>
+</lg>
+<lg n="1" met="paṅkti">
+    <l>This meter appears in prosody and has several patterns. We display them all
+    in the tooltip. But we do not add a clickable link to the prosody file since
+    there are several records.</l>
+</lg>
+<lg n="1" met="foobar">
+    <l>This meter does not appear in prosody. We only show its name in this case.</l>
+</lg>
+<lg n="1" met="+=-2-6/||++12|">
+    <l>This meter is an XML pattern. It should be converted to a prosody pattern.
+    There should be some space between letters, but double daṇḍas (||) and groups of
+    digits (12) should be kept together.</l>
+</lg>
+    
+</div>
+    
+<div type="textpart" n="C"><head>Use of @met and @real with l</head>
+
+<lg n="1" met="met">
+    <l met="++---">For l[@met], we display the prosodic pattern in a tooltip when hovering over the line.</l>
+</lg>
+<lg n="1" met="met">
+    <l met="anuṣṭubh">For l[@met], we also display a tooltip with the name + patterns if @met is present in the prosody file.</l>
+</lg>
+<lg n="1" met="met">
+    <l met="paṅkti">For l[@met], we also display a tooltip if @met occurs several times in the prosody file.</l>
+</lg>
+<lg n="1" met="met">
+    <l met="unknownmeter">For l[@met], we also display a tooltip if @met is not present in the prosody file.</l>
+</lg>
+<lg n="1" met="met">
+    <l real="++---">For l[@real], we display the prosodic pattern in a tooltip.</l>
+</lg>
+<lg n="1" met="met">
+    <l real="++---" met="anuṣṭubh">For l[@real and @met], we display the prosodic pattern in a tooltip.</l>
+</lg>
+
+</div>
+    
+<div type="textpart" n="D"><head>Use of @met with seg</head>
+
+<p>
+Peculiar case for seg[gap]: 
+foo<seg met="+++-++"><gap reason="lost" quantity="6" unit="character"/></seg>bar.
+</p> 
+
+</div>
+
+</div>
+    
+    </body></text>
+</TEI>
