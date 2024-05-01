@@ -41,7 +41,10 @@
     <l n="d">four</l>
 </lg>
 
-<p>When there are more than 4 l elements, we start numbering them</p>
+<p>When there are more than 4 l elements, we start numbering them. We use
+the l/@n values, and display them next to the line. This is a request of
+Manu.
+</p>
 
 <lg n="1" met="foo">
     <l n="a">one</l>
