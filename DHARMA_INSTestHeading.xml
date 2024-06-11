@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Test Headings</title>
+                <respStmt>
+                    <resp>so many</resp>
+                    <persName ref="part:mime">
+                        <forename>Michaël</forename>
+                        <surname>Meyer</surname>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>DHARMA</authority>
+                <pubPlace>Paris</pubPlace>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>DHARMAbase</repository>
+                        <idno/>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:space="preserve"><body>			
+
+
+<div type="edition">
+    <div type="textpart"></div>
+    <div type="textpart" n="A"></div>
+    <div type="textpart" subtype="column"></div>
+    <div type="textpart" subtype="column" n="A"></div>
+    <div type="textpart" subtype="column" n="A"><head>My title<note>My footnote</note></head></div>
+    <div type="textpart" subtype="column" n="A"><head>My title</head><note>My footnote</note></div>
+    <div type="textpart" subtype="column" n="A"><head>My title<note>My footnote</note></head><note>My footnote</note></div>
+</div>
+
+<div type="translation"></div>
+        
+<div type="translation" xml:lang="deu"></div>
+<div type="translation" xml:lang="deu" resp="part:mime"></div>
+<div type="translation" xml:lang="deu" resp="part:mime part:emfr"></div>
+<div type="translation" xml:lang="deu" resp="part:mime part:emfr part:argr"></div>
+<div type="translation" xml:lang="deu" source="bib:Eltschinger2001_01"></div>  
+
+<div type="translation" resp="part:mime"></div>
+<div type="translation" resp="part:mime part:emfr"></div>
+<div type="translation" resp="part:mime part:emfr part:argr"></div>
+<div type="translation" source="bib:Eltschinger2001_01"></div>
+
+<div type="translation"><head>My title</head></div>
+<div type="translation"><!--comment--><head>My title</head></div>
+
+<div type="translation"><note>My footnote</note></div>
+<div type="translation"><head>My title</head><note>My footnote</note></div>
+<div type="translation"><head>My<note>My footnote</note> title<note>My footnote</note></head></div>
+<div type="translation"><head>My<note>My footnote</note> title<note>My footnote</note></head><note>My footnote</note></div>
+        
+    </body></text>
+</TEI>
