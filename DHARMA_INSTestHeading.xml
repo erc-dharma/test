@@ -39,6 +39,8 @@
     <div type="textpart" subtype="column" n="A"><head>My title<note>My footnote</note></head></div>
     <div type="textpart" subtype="column" n="A"><head>My title</head><note>My footnote</note></div>
     <div type="textpart" subtype="column" n="A"><head>My title<note>My footnote</note></head><note>My footnote</note></div>
+    <div type="textpart" subtype="column" n="A"><head>My title<note>My footnote</note></head><note>My footnote</note><note>My footnote</note></div>
+    <div type="textpart" subtype="column" n="A"><head>My title<note>My footnote</note></head><note>My footnote</note> <note>My footnote</note></div>
 </div>
 
 <div type="translation"></div>
@@ -61,6 +63,8 @@
 <div type="translation"><head>My title</head><note>My footnote</note></div>
 <div type="translation"><head>My<note>My footnote</note> title<note>My footnote</note></head></div>
 <div type="translation"><head>My<note>My footnote</note> title<note>My footnote</note></head><note>My footnote</note></div>
-        
+<div type="translation"><head>My<note>My footnote</note> title<note>My footnote</note></head><note>My footnote</note><note>My footnote</note></div>
+<div type="translation"><head>My<note>My footnote</note> title<note>My footnote</note></head><note>My footnote</note> <note>My footnote</note></div>
+
     </body></text>
 </TEI>
