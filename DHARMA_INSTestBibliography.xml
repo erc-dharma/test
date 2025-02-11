@@ -28,17 +28,17 @@
         </sourceDesc>
     </fileDesc>
 </teiHeader>
-<text xml:space="preserve"><body>			
+<text xml:space="preserve"><body>
 
-<div type="edition" xml:lang="eng"> 
+<div type="edition" xml:lang="eng">
 </div>
-        
+
 <div type="translation" xml:lang="fra" source="bib:Estienne-Monod2008_01">
 <p>Bibliographic reference not in the div bibliography, links should point
 to the global bibliography (both the reference in the title of this section
 and the reference that follows). On the other hand, links in the sidebar TOC
 should not include the bib reference as a pointer.</p>
-    
+
 <p><bibl><ptr target="bib:Estienne-Monod2008_01"/></bibl></p>
 </div>
 
@@ -49,10 +49,15 @@ to it.</p>
 </div>
 
 <div type="bibliography">
- <listBibl type="primary">
-     <bibl n="E"><ptr target="bib:Eltschinger2001_01"/></bibl>
- </listBibl>   
+    <p>A schematron constraint should say that there are duplicate short titles in this bibliography.</p>
+    <listBibl type="primary">
+        <bibl n="E"><ptr target="bib:Eltschinger2001_01"/></bibl>
+        <bibl><ptr target="bib:duplicate_short_title"/></bibl>
+    </listBibl>
+    <listBibl type="secondary">
+        <bibl><ptr target="bib:duplicate_short_title"/></bibl>
+    </listBibl>
 </div>
-    
+
 </body></text>
 </TEI>
