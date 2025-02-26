@@ -46,6 +46,28 @@
     A<ref target="DHARMA_INSMyText"/>B<ptr target="DHARMA_INSMyText"/>C.</p>
 <p>When the ref is empty and has a path that is not a text as @target, display the path (not sure this is the best thing to do):
     A<ref target="/hello/world"/>B<ptr target="/hello/world"/>C.</p>
+    
+<p><ref target="http://example.com">This link's target should be http://example.com</ref></p>
+<p><ref target="https://example.com">This link's target should be https://example.com</ref></p>
+<p><ref target="/">This link's target should be /</ref></p>
+<p><ref target="INSPallava00230">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="INSPallava00230.xml">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="DHARMA_INSPallava00230">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="DHARMA_INSPallava00230.xml">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="/texts/INSPallava00230">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="/texts/INSPallava00230.xml">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="/texts/DHARMA_INSPallava00230">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="/texts/DHARMA_INSPallava00230.xml">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="http://dharmalekha.info/texts/INSPallava00230">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="http://dharmalekha.info/texts/INSPallava00230.xml">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="http://dharmalekha.info/texts/DHARMA_INSPallava00230">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="http://dharmalekha.info/texts/DHARMA_INSPallava00230.xml">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="https://dharmalekha.info/texts/INSPallava00230">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="https://dharmalekha.info/texts/INSPallava00230.xml">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="https://dharmalekha.info/texts/DHARMA_INSPallava00230">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="https://dharmalekha.info/texts/DHARMA_INSPallava00230.xml">This link's target should be /texts/INSPallava00230</ref></p>
+<p><ref target="/foo">This link's target should be /foo</ref></p>
+<p><ref target="/foo/bar">This link's target should be /foo/bar</ref></p>
 
 </div>
     </body></text>
