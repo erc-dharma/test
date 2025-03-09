@@ -34,10 +34,16 @@
 <p>
     <g type="numeral">34</g>
     <g type="numeral">3/4</g>
+    <g type="numeral">3⁄4</g>
+    <g type="numeral">¾</g>
+    <g type="numeral">294303/23920</g>
+    <g type="numeral">294303⁄23920</g>
+    
     <g type="floret"></g>
     <g type="floret">.</g>
     <g type="floret">§</g>
     <g type="floret">§§§</g>
+    
     <g type="myUnknownSymbol"></g>
     <g type="myUnknownSymbol">.</g>
     <g type="myUnknownSymbol">§</g>
