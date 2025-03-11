@@ -120,11 +120,11 @@ Another definition list, with an explicit @rend=description:
 </list>
 </p>
 </div>
-    
+<!--
 <div type="textpart" n="B">
 <head>Quotations</head>
     
-<p>There are two elements "q" and "quote" for quotations. We treat them identically.</p>
+<p>There are two TEI elements "q" and "quote" for quotations. We treat them identically.</p>
     
 <p>This is an inline quote: <q>hello world</q>.</p>
 <p>This is an inline quote: <quote>hello world</quote>.</p>
@@ -185,7 +185,7 @@ Another definition list, with an explicit @rend=description:
 <p><lb n="4"/><space type="feature"/></p>
  
 </div>
-    
+-->
 </div>
 	</body>
 </text>
