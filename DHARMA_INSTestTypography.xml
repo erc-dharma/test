@@ -29,13 +29,13 @@
     </fileDesc>
 </teiHeader>
 <text xml:space="preserve">
-    <body>			
+    <body>
 
 <div type="edition" xml:lang="eng" rendition="class:00000 maturity:00000">
 <div type="textpart" n="A">
 <head>Lists</head>
-    
-<p>   
+
+<p>
 Here is a plain list:
 <list>
     <item>Tomate</item>
@@ -79,7 +79,7 @@ Here is a bulleted list:
     <item>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</item>
 </list>
 </p>
-    
+
 <p>
 Here is a numbered list:
 <list rend="numbered">
@@ -95,7 +95,7 @@ Here is a numbered list:
     <item>Melon</item>
 </list>
 </p>
-   
+
 <p>
 Here is a definition list:
 <list>
@@ -120,45 +120,50 @@ Another definition list, with an explicit @rend=description:
 </list>
 </p>
 </div>
-<!--
+
 <div type="textpart" n="B">
 <head>Quotations</head>
-    
-<p>There are two TEI elements "q" and "quote" for quotations. We treat them identically.</p>
-    
+
+<p>There are two TEI elements "q" and "quote" for quotations. (There also exists a "quotation" element, but it is not used for this.) The distinction is fuzzy, and people are not consistent, so we just treat them identically. Thus "q" and "quote" can be used interchangeably, the result is the same.</p>
+
 <p>This is an inline quote: <q>hello world</q>.</p>
 <p>This is an inline quote: <quote>hello world</quote>.</p>
-    
+
 <p>This is a block quote:
     <quote rend="block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</quote>
 </p>
-    
+
 <p>This is a block quote:
     <q rend="block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</q>
 </p>
-    
+
 <p>This is an inline quotation: <cit><quote>Hello world</quote>
     <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
 </cit>.
 </p>
-    
-<p>This is an inline quotation: <cit><q>Hello world</q>
+
+<p>This is an inline quotation with a reference: <cit><q>Hello world</q>
     <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
 </cit>.
 </p>
-    
-<p>This is a block quotation: <cit><quote rend="block">Hello world.</quote>
+
+<p>This is an inline quotation with a reference: <cit><quote rend="block">Hello world.</quote>
     <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
 </cit>
 </p>
 
-<p>This is a block quotation: <cit><q rend="block">Hello world.</q>
+<p>This is a block quotation with a reference: <cit><q rend="block">Hello world.</q>
     <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
 </cit>
 </p>
-    
+
+<p>This is a block quotation with a reference: <cit><quote rend="block">Hello world.</quote>
+    <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
+</cit>
+</p>
+
 </div>
-    
+
 <div type="textpart" n="C">
 <head>Spaces</head>
 
@@ -183,9 +188,9 @@ Another definition list, with an explicit @rend=description:
 <p><lb n="4"/><space type="ascender"/></p>
 <p><lb n="4"/><space type="defect"/></p>
 <p><lb n="4"/><space type="feature"/></p>
- 
+
 </div>
--->
+
 </div>
 	</body>
 </text>
