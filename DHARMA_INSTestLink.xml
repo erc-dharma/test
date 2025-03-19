@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Test Gaiji</title>
+                <title>Test Links</title>
                 <respStmt>
                     <resp>so many</resp>
                     <persName ref="part:mime">
@@ -28,7 +28,7 @@
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    <text xml:space="preserve"><body>			
+    <text xml:space="preserve"><body>
 
 <div type="edition" xml:lang="san">
 <p>We use the same code for parsing ref and ptr elements,
@@ -46,7 +46,7 @@
     A<ref target="DHARMA_INSMyText"/>B<ptr target="DHARMA_INSMyText"/>C.</p>
 <p>When the ref is empty and has a path that is not a text as @target, display the path (not sure this is the best thing to do):
     A<ref target="/hello/world"/>B<ptr target="/hello/world"/>C.</p>
-    
+
 <p><ref target="http://example.com">This link's target should be http://example.com</ref></p>
 <p><ref target="https://example.com">This link's target should be https://example.com</ref></p>
 <p><ref target="/">This link's target should be /</ref></p>

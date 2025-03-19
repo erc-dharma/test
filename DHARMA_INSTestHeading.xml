@@ -2,69 +2,79 @@
 <?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Test Headings</title>
-                <respStmt>
-                    <resp>so many</resp>
-                    <persName ref="part:mime">
-                        <forename>Michaël</forename>
-                        <surname>Meyer</surname>
-                    </persName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>DHARMA</authority>
-                <pubPlace>Paris</pubPlace>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <repository>DHARMAbase</repository>
-                        <idno/>
-                    </msIdentifier>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-    </teiHeader>
-    <text xml:space="preserve"><body>			
-
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Testing of division headings</title>
+				<respStmt>
+					<resp>so many</resp>
+					<persName ref="part:mime">
+						<forename>Michaël</forename>
+						<surname>Meyer</surname>
+					</persName>
+				</respStmt>
+			</titleStmt>
+			<publicationStmt>
+				<authority>DHARMA</authority>
+				<pubPlace>Paris</pubPlace>
+			</publicationStmt>
+			<sourceDesc>
+				<msDesc>
+					<msIdentifier>
+						<repository>DHARMAbase</repository>
+						<idno/>
+					</msIdentifier>
+				</msDesc>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text xml:space="preserve"><body>
 
 <div type="edition">
-    <div type="textpart"></div>
-    <div type="textpart" n="A"></div>
-    <div type="textpart" subtype="column"></div>
-    <div type="textpart" subtype="column" n="A"></div>
-    <div type="textpart" subtype="column" n="A"><head>My title<note>My footnote</note></head></div>
-    <div type="textpart" subtype="column" n="A"><head>My title</head><note>My footnote</note></div>
-    <div type="textpart" subtype="column" n="A"><head>My title<note>My footnote</note></head><note>My footnote</note></div>
-    <div type="textpart" subtype="column" n="A"><head>My title<note>My footnote</note></head><note>My footnote</note><note>My footnote</note></div>
-    <div type="textpart" subtype="column" n="A"><head>My title<note>My footnote</note></head><note>My footnote</note> <note>My footnote</note></div>
+	<!-- Tests of textpart headings -->
+
+	<!-- The 2 following lines should use "part" (default value of @subtype) -->
+	<div type="textpart"></div>
+	<div type="textpart" n="A"></div>
+	<div type="textpart" subtype="column"></div>
+	<div type="textpart" subtype="column" n="A"></div>
+	<div type="textpart" subtype="any subtype works"></div>
+	<div type="textpart" subtype="any subtype works" n="A"></div>
+
+	<!-- When a heading is given, it completely replaces the heading we would
+	generate otherwise, thus the following should just print "My title". -->
+	<div type="textpart"><head>My title</head></div>
+	<div type="textpart" n="A"><head>My title</head></div>
+	<div type="textpart" subtype="column"><head>My title</head></div>
+	<div type="textpart" subtype="column" n="A"><head>My title</head></div>
+
+	<!-- With footnotes -->
+	<div type="textpart" subtype="with a footnote"><note>My footnote</note></div>
+	<div type="textpart" subtype="column" n="A"><head>Also with a footnote<note>My footnote</note></head></div>
+
 </div>
 
+<!-- All div types have a computer-generated heading ("Edition", "Apparatus", "Translation by X", etc.). But this heading can be overwritten by adding a <head> element immediately after the heading. The guide talks about this for @type='translation' and @type='textpart', but we also make it work for all other div types. -->
+
 <div type="translation"></div>
-        
+
 <div type="translation" xml:lang="deu"></div>
 <div type="translation" xml:lang="deu" resp="part:mime"></div>
 <div type="translation" xml:lang="deu" resp="part:mime part:emfr"></div>
 <div type="translation" xml:lang="deu" resp="part:mime part:emfr part:argr"></div>
-<div type="translation" xml:lang="deu" source="bib:Eltschinger2001_01"></div>  
+<div type="translation" xml:lang="deu" source="bib:Eltschinger2001_01"></div>
 
 <div type="translation" resp="part:mime"></div>
+<div type="translation" xml:lang="eng" resp="part:mime"></div>
 <div type="translation" resp="part:mime part:emfr"></div>
 <div type="translation" resp="part:mime part:emfr part:argr"></div>
 <div type="translation" source="bib:Eltschinger2001_01"></div>
 
 <div type="translation"><head>My title</head></div>
-<div type="translation"><!--comment--><head>My title</head></div>
 
+<!-- With footnotes -->
 <div type="translation"><note>My footnote</note></div>
 <div type="translation"><head>My title</head><note>My footnote</note></div>
-<div type="translation"><head>My<note>My footnote</note> title<note>My footnote</note></head></div>
-<div type="translation"><head>My<note>My footnote</note> title<note>My footnote</note></head><note>My footnote</note></div>
-<div type="translation"><head>My<note>My footnote</note> title<note>My footnote</note></head><note>My footnote</note><note>My footnote</note></div>
-<div type="translation"><head>My<note>My footnote</note> title<note>My footnote</note></head><note>My footnote</note> <note>My footnote</note></div>
 
-    </body></text>
+	</body></text>
 </TEI>

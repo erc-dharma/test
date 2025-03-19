@@ -31,6 +31,7 @@
 <text xml:space="preserve"><body>			
 
 <div type="edition" xml:lang="eng"> 
+    <p>This is designed to test whether we handle spaces properly in filenames.</p>
 </div>
     
 </body></text>

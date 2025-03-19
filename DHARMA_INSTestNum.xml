@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Test Gaiji</title>
+                <title>Test Numbers</title>
                 <respStmt>
                     <resp>so many</resp>
                     <persName ref="part:mime">
@@ -32,27 +32,34 @@
 
 <div type="edition" xml:lang="san">
 <p>
-	<!-- These should produce the same output -->
-	<g type="numeral">34</g>
-	<g type="numeral">3/4</g>
-	<g type="numeral">3⁄4</g>
-	<g type="numeral">¾</g>
 
-	<!-- These should produce the same output -->
-	<g type="numeral">294303/23920</g>
-	<g type="numeral">294303⁄23920</g>
+<!-- These should not bear a tooltip, because it would be useless:
+#1 contains a series of digits (instead of, say, a word), so
+the user can tell it's a numeral
+#2 has the same value as the text of the node, so the tooltip would
+just provide the same info. -->
+<num>20</num>
+<num value="20">20</num>
 
-	<!-- Symbol in the gaiji table -->
-	<g type="floret"></g>
-	<g type="floret">.</g>
-	<g type="floret">§</g>
-	<g type="floret">§§§</g>
+<!-- The following should bear a tooltip, because:
+#1 contains a word instead of digits
+#2 has a value different from the node's text
+#3 and #4 have @cert='low' -->
+<num>num</num>
+<num value="20">num</num>
+<num cert="low">20</num>
+<num value="20" cert="low">20</num>
 
-	<!-- Symbol not in the gaiji table -->
-	<g type="myUnknownSymbol"></g>
-	<g type="myUnknownSymbol">.</g>
-	<g type="myUnknownSymbol">§</g>
-	<g type="myUnknownSymbol">§§§</g>
+<num value="200">num</num>
+<num atLeast="200">num</num>
+<num atMost="200">num</num>
+<num atLeast="200" atMost="300">num</num>
+
+<num value="200" cert="low">num</num>
+<num atLeast="200" cert="low">num</num>
+<num atMost="200" cert="low">num</num>
+<num atLeast="200" atMost="300" cert="low">num</num>
+
 </p>
 </div>
 

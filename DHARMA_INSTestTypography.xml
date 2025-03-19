@@ -167,27 +167,27 @@ Another definition list, with an explicit @rend=description:
 <div type="textpart" n="C">
 <head>Spaces</head>
 
-<p><lb n="1"/>_</p>
-<p><lb n="1"/><space/></p>
-<p><lb n="1"/><space quantity="1" unit="character"/></p>
-<p><lb n="1"/><space quantity="2" unit="character"/></p>
-<p><lb n="1"/><space quantity="3" unit="character"/></p>
+<p>X_Y</p>
+<p>X<space/>Y</p>
+<p>X<space quantity="1" unit="character"/>Y</p>
+<p>X<space quantity="2" unit="character"/>Y</p>
+<p>X<space quantity="3" unit="character"/>Y</p>
 
-<p><lb n="2"/><space type="unclassified"/></p>
-<p><lb n="2"/><space type="unclassified" quantity="1" unit="character"/></p>
-<p><lb n="2"/><space type="unclassified" quantity="2" unit="character"/></p>
-<p><lb n="2"/><space type="unclassified" quantity="3" unit="character"/></p>
+<p>X<space type="unclassified"/>Y</p>
+<p>X<space type="unclassified" quantity="1" unit="character"/>Y</p>
+<p>X<space type="unclassified" quantity="2" unit="character"/>Y</p>
+<p>X<space type="unclassified" quantity="3" unit="character"/>Y</p>
 
-<p><lb n="3"/><space type="vacat"/></p>
-<p><lb n="3"/><space type="vacat" quantity="1" unit="character"/></p>
-<p><lb n="3"/><space type="vacat" quantity="2" unit="character"/></p>
-<p><lb n="3"/><space type="vacat" quantity="3" unit="character"/></p>
+<p>X<space type="vacat"/>Y</p>
+<p>X<space type="vacat" quantity="1" unit="character"/>Y</p>
+<p>X<space type="vacat" quantity="2" unit="character"/>Y</p>
+<p>X<space type="vacat" quantity="3" unit="character"/>Y</p>
 
-<p><lb n="4"/><space type="binding-hole"/></p>
-<p><lb n="4"/><space type="descender"/></p>
-<p><lb n="4"/><space type="ascender"/></p>
-<p><lb n="4"/><space type="defect"/></p>
-<p><lb n="4"/><space type="feature"/></p>
+<p>X<space type="binding-hole"/>Y</p>
+<p>X<space type="descender"/>Y</p>
+<p>X<space type="ascender"/>Y</p>
+<p>X<space type="defect"/>Y</p>
+<p>X<space type="feature"/>Y</p>
 
 </div>
 

@@ -25,7 +25,8 @@
 <text>
     <body>
     <p>This file is not valid XML (this paragraph is not closed). Still, it
-        should appear in the catalog, with placeholder values.
+	    should appear in the catalog, with placeholder values. Could
+	    also try to fix the file, but would be more complicated
     </body>
 </text>
 </TEI>

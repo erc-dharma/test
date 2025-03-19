@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Test Gaiji</title>
+                <title>Test Numbers</title>
                 <respStmt>
                     <resp>so many</resp>
                     <persName ref="part:mime">
@@ -32,27 +32,13 @@
 
 <div type="edition" xml:lang="san">
 <p>
-	<!-- These should produce the same output -->
-	<g type="numeral">34</g>
-	<g type="numeral">3/4</g>
-	<g type="numeral">3⁄4</g>
-	<g type="numeral">¾</g>
 
-	<!-- These should produce the same output -->
-	<g type="numeral">294303/23920</g>
-	<g type="numeral">294303⁄23920</g>
+	<supplied reason="subaudible">a</supplied>
+	<supplied reason="explanation">a</supplied>
+	<supplied reason="lost">a</supplied>
+	<supplied reason="omitted">a</supplied>
+	<supplied reason="undefined">a</supplied>
 
-	<!-- Symbol in the gaiji table -->
-	<g type="floret"></g>
-	<g type="floret">.</g>
-	<g type="floret">§</g>
-	<g type="floret">§§§</g>
-
-	<!-- Symbol not in the gaiji table -->
-	<g type="myUnknownSymbol"></g>
-	<g type="myUnknownSymbol">.</g>
-	<g type="myUnknownSymbol">§</g>
-	<g type="myUnknownSymbol">§§§</g>
 </p>
 </div>
 
