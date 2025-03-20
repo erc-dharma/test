@@ -121,6 +121,31 @@ Another definition list, with an explicit @rend=description:
 </p>
 </div>
 
+<div type="textpart">
+<head>Footnotes</head>
+
+A note<note>My footnote</note> here.
+
+A note with @resp<note resp="part:mime">My footnote</note> here.
+A note with @resp<note resp="part:mime part:emfr">My footnote</note> here.
+A note with @resp<note resp="part:mime part:emfr part:argr">My footnote</note> here.
+A note with @resp<note resp="mime emfr argr">My footnote</note> here.
+
+A note with @source<note source="bib:Test_Book">My footnote</note> here.
+A note with @source<note source="bib:Test_Book bib:Test_Article">My footnote</note> here.
+A note with @source<note source="bib:Test_Book bib:Test_Article">My footnote</note> here.
+A note with @source<note source="bib:Test_Book bib:Test_Article bib:Test_Inbook">My footnote</note> here.
+A note with @source<note source="Test_Book Test_Article Test_Inbook">My footnote</note> here.
+
+</div>
+
+<div type="textpart">
+<head>Misc</head>
+
+Foreign stuff as <foreign>this is foreign</foreign> end.
+
+</div>
+
 <div type="textpart" n="B">
 <head>Quotations</head>
 

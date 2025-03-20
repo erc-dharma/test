@@ -48,9 +48,11 @@
 	<div type="textpart" subtype="column"><head>My title</head></div>
 	<div type="textpart" subtype="column" n="A"><head>My title</head></div>
 
-	<!-- With footnotes -->
+	<!-- With footnotes. -->
 	<div type="textpart" subtype="with a footnote"><note>My footnote</note></div>
+	<!-- These two should produce the same result. -->
 	<div type="textpart" subtype="column" n="A"><head>Also with a footnote<note>My footnote</note></head></div>
+	<div type="textpart" subtype="column" n="A"><head>Also with a footnote</head><note>My footnote</note></div>
 
 </div>
 
@@ -74,6 +76,8 @@
 
 <!-- With footnotes -->
 <div type="translation"><note>My footnote</note></div>
+<!-- These two should produce the same result. -->
+<div type="translation"><head>My title<note>My footnote</note></head></div>
 <div type="translation"><head>My title</head><note>My footnote</note></div>
 
 	</body></text>
