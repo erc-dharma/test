@@ -183,15 +183,6 @@ When l/@n is empty, we don't print anything.
 
 </div>
     
-<div type="textpart"><head>Use of @met with seg</head>
-
-<p>
-Peculiar case for seg[gap]: 
-foo<seg met="+++-++"><gap reason="lost" quantity="6" unit="character"/></seg>bar.
-</p> 
-
-</div>
-
 </div>
     
     </body></text>

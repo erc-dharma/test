@@ -124,6 +124,11 @@
 	<seg rend="pun">a</seg>
 	<seg rend="check pun">a</seg>
 
+<p>
+Peculiar case for seg[gap]: 
+foo<seg met="+++-++"><gap reason="lost" quantity="6" unit="character"/></seg>bar.
+</p> 
+
 </p></div>
 
 </div>
