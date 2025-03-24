@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Test Various Types of Paragraphs</title>
+                <respStmt>
+                    <resp>so many</resp>
+                    <persName ref="part:mime">
+                        <forename>Michaël</forename>
+                        <surname>Meyer</surname>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>DHARMA</authority>
+                <pubPlace>Paris</pubPlace>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>DHARMAbase</repository>
+                        <idno/>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:space="preserve"><body>
+
+<div type="edition" xml:lang="san">
+
+<!-- We treat "p" and "ab" identically. -->
+
+<p>Basic paragraph</p>
+<ab>Basic paragraph</ab>
+
+<p n="4">Numbered paragraph</p>
+<ab n="4">Numbered paragraph</ab>
+
+<p n="4-9 and 6 and 20">Numbered paragraph</p>
+<ab n="4-9 and 6 and 20">Numbered paragraph</ab>
+
+<!-- Paragraphs with @rend='verse' are treated as lg. See relevant files for more test cases. -->
+
+<p rend="stanza"><l>Some text.</l></p>
+<ab rend="stanza"><l>Some text.</l></ab>
+<lg><l>Some text.</l></lg>
+
+<!-- Various types of @n -->
+
+<p rend="stanza" n="9"><l>Some text.</l></p>
+<ab rend="stanza" n="9"><l>Some text.</l></ab>
+<lg n="9"><l>Some text.</l></lg>
+
+</div>
+
+    </body></text>
+</TEI>

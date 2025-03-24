@@ -32,21 +32,57 @@
 
 <div type="edition" xml:lang="san" rendition="class:00000 maturity:00000">
 
-<div type="textpart" n="A"><head>lg element</head>
-    
-<lg n="1" met="foo">
+<div type="textpart"><head>Verse</head>
+
+<!-- p[@rend='stanza'], ab[@rend='stanza'] and lg are treated identically -->
+
+<p rend="stanza"><l>Some text.</l></p>
+<ab rend="stanza"><l>Some text.</l></ab>
+<lg><l>Some text.</l></lg>
+
+<!-- With @n -->
+
+<p rend="stanza" n="9"><l>Some text.</l></p>
+<ab rend="stanza" n="9"><l>Some text.</l></ab>
+<lg n="9"><l>Some text.</l></lg>
+
+<!-- With a complex @n -->
+
+<p rend="stanza" n="9-25 and 0-41 and also 9999999"><l>Some text.</l></p>
+<ab rend="stanza" n="9-25 and 0-41 and also 9999999"><l>Some text.</l></ab>
+<lg n="9-25 and 0-41 and also 9999999"><l>Some text.</l></lg>
+
+<!-- Both @n and @met -->
+
+<p rend="stanza" n="9" met="anuṣṭubh"><l>Some text.</l></p>
+<ab rend="stanza" n="9" met="anuṣṭubh"><l>Some text.</l></ab>
+<lg n="9" met="anuṣṭubh"><l>Some text.</l></lg>
+
+<!-- Only @met -->
+
+<p rend="stanza" met="anuṣṭubh"><l>Some text.</l></p>
+<ab rend="stanza" met="anuṣṭubh"><l>Some text.</l></ab>
+<lg met="anuṣṭubh"><l>Some text.</l></lg>
+
+</div>
+
+<div type="textpart"><head>Verse lines numbering</head>
+
+<p>When there are more than 4 l elements, we start numbering them. We use
+the l/@n values, and display them to the right of the line. This is a request of
+Manu.
+
+When l/@n is empty, we don't print anything.
+</p>
+
+<lg>
     <l n="a">one</l>
     <l n="b">two</l>
     <l n="c">three</l>
     <l n="d">four</l>
 </lg>
 
-<p>When there are more than 4 l elements, we start numbering them. We use
-the l/@n values, and display them next to the line. This is a request of
-Manu.
-</p>
-
-<lg n="1" met="foo">
+<lg>
     <l n="a">one</l>
     <l n="b">two</l>
     <l n="c">three</l>
@@ -54,7 +90,7 @@ Manu.
     <l n="e">five</l>
 </lg>
 
-<lg n="1" met="foo">
+<lg>
     <l n="a">one</l>
     <l n="b">two</l>
     <l n="c">three</l>
@@ -67,65 +103,87 @@ Manu.
     <l n="j">ten</l>
     <l n="k">eleven</l>
     <l n="l">twelve</l>
-</lg>    
-    
-</div>
-    
-<div type="textpart" n="B"><head>Use of @met with lg</head>
+</lg>
 
-<lg n="1" met="anuṣṭubh">
+<lg>
+    <l>one</l>
+    <l>two</l>
+    <l>three</l>
+    <l>four</l>
+</lg>
+
+<lg>
+    <l>one</l>
+    <l>two</l>
+    <l>three</l>
+    <l>four</l>
+    <l>five</l>
+</lg>
+
+<lg>
+    <l n="a">one</l>
+    <l n="b">two</l>
+    <l n="c">three</l>
+    <l n="d">four</l>
+    <l n="e">five</l>
+    <l n="f">six</l>
+    <l>seven</l>
+    <l>eight</l>
+    <l>nine</l>
+    <l>ten</l>
+    <l>eleven</l>
+    <l>twelve</l>
+</lg>
+
+</div>
+
+<div type="textpart"><head>Use of @met</head>
+
+<lg met="anuṣṭubh">
     <l>The meter appears in prosody, should have a clickable link to the prosody page
     as well as a tooltip that gives the meter's prosodic pattern. In the present case,
     we have a prosodic pattern (seg[@type='prosody'])</l>
 </lg>
-<lg n="1" met="lalitā">
+<lg met="lalitā">
     <l>This meter does not have a seg[@type='prosody'], but does have a seg[@type='xml'].
     In this case, this last value is used as a fallback.</l>
 </lg>
-<lg n="1" met="trimeter">
+<lg met="trimeter">
     <l>This meter does not have any pattern. In this case, we still add a link to the
     prosody table, but we do not show anything in the tooltip.</l>
 </lg>
-<lg n="1" met="paṅkti">
-    <l>This meter appears in prosody and has several patterns. We display them all
-    in the tooltip. But we do not add a clickable link to the prosody file since
-    there are several records.</l>
-</lg>
-<lg n="1" met="foobar">
+<lg met="foobar">
     <l>This meter does not appear in prosody. We only show its name in this case.</l>
 </lg>
-<lg n="1" met="+=-2-6/||++12|">
+<lg met="+=-2-6/||++12|">
     <l>This meter is an XML pattern. It should be converted to a prosody pattern.
     There should be some space between letters, but double daṇḍas (||) and groups of
     digits (12) should be kept together.</l>
 </lg>
     
 </div>
-    
-<div type="textpart" n="C"><head>Use of @met and @real with l</head>
 
-<lg n="1" met="met">
+<div type="textpart"><head>Use of @met and @real with l</head>
+
+<lg>
     <l met="++---">For l[@met], we display the prosodic pattern in a tooltip when hovering over the line.</l>
 </lg>
-<lg n="1" met="met">
+<lg>
     <l met="anuṣṭubh">For l[@met], we also display a tooltip with the name + patterns if @met is present in the prosody file.</l>
 </lg>
-<lg n="1" met="met">
-    <l met="paṅkti">For l[@met], we also display a tooltip if @met occurs several times in the prosody file.</l>
-</lg>
-<lg n="1" met="met">
+<lg>
     <l met="unknownmeter">For l[@met], we also display a tooltip if @met is not present in the prosody file.</l>
 </lg>
-<lg n="1" met="met">
+<lg>
     <l real="++---">For l[@real], we display the prosodic pattern in a tooltip.</l>
 </lg>
-<lg n="1" met="met">
+<lg>
     <l real="++---" met="anuṣṭubh">For l[@real and @met], we display the prosodic pattern in a tooltip.</l>
 </lg>
 
 </div>
     
-<div type="textpart" n="D"><head>Use of @met with seg</head>
+<div type="textpart"><head>Use of @met with seg</head>
 
 <p>
 Peculiar case for seg[gap]: 

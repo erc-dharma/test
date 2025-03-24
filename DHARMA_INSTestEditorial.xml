@@ -111,7 +111,18 @@
 <div type="textpart"><head>abbr</head><p>
 
 	<abbr>a</abbr>
+	<ex>a</ex>
+	<am>a</am>
+	<abbr>a<am>b</am>c</abbr>
+	<expan><abbr>aug<am>g</am></abbr><ex>usti duo</ex></expan>
 
+</p></div>
+
+<div type="textpart"><head>seg</head><p>
+
+	<seg rend="check">a</seg>
+	<seg rend="pun">a</seg>
+	<seg rend="check pun">a</seg>
 
 </p></div>
 
