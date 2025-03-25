@@ -31,11 +31,93 @@
     <text xml:space="preserve"><body>
 
 <div type="edition" xml:lang="san">
+
 <p>
-
-<milestone type="pagelike" unit="face" n="A" break="no"/>
-
+    The following should produce the same result:
+    <milestone/>
+    <milestone type="gridlike"/>
+    <milestone unit="column"/>
+    <milestone break="yes"/>
+    <milestone type="gridlike" unit="column"/>
+    <milestone type="gridlike" break="yes"/>
+    <milestone unit="column" break="yes"/>
 </p>
+
+<p>
+    Use of milestone/@n:
+    <milestone n="A"/>
+    <milestone type="pagelike" n="A"/>
+    <pb n="A"/>
+    <lb n="A"/>
+    <milestone n="A-32 hello-world"/>
+    <pb n="A-32 hello-world"/>
+    <lb n="A-32 hello-world"/>
+</p>
+
+<p>
+    Trailing label after a milestone:
+    <milestone type="gridlike"/><label>My label</label>
+    <milestone type="pagelike"/><label>My label</label>
+    <pb/><label>My label</label>
+    <lb/><label>My label</label>
+    <milestone type="gridlike" n="1"/><label>My label</label>
+    <milestone type="pagelike" n="1"/><label>My label</label>
+    <pb n="1"/><label>My label</label>
+    <lb n="1"/><label>My label</label>
+</p>
+
+<p>
+    Use of fw; after a pagelike milestone or pb, is incorporated into
+    the page break; otherwise it is treated separately.
+    <milestone type="pagelike"/><fw>Hello</fw>
+    <pb/><fw>Hello</fw>
+    <milestone type="gridlike"/><fw>Hello</fw>
+    <lb/><fw>Hello</fw>
+</p>
+
+<p>
+    fw with/without @n (for now we don't display the @n) and with/without contents
+    <pb/><fw/>
+    <pb/><fw n="1"/>
+    <pb/><fw n="1" place="top"/>
+    <pb/><fw>Hello</fw>
+    <pb/><fw n="1">Hello</fw>
+    <pb/><fw n="1" place="top">Hello</fw>
+</p>
+
+<p>
+    fw with a valid @place:
+    <pb/><fw place="bot-left">Hello</fw>
+    <pb/><fw place="bot-right">Hello</fw>
+    <pb/><fw place="bottom">Hello</fw>
+    <pb/><fw place="left">Hello</fw>
+    <pb/><fw place="right">Hello</fw>
+    <pb/><fw place="top">Hello</fw>
+    <pb/><fw place="top-left">Hello</fw>
+    <pb/><fw place="top-right">Hello</fw>
+</p>
+
+<p>
+    fw with an invalid @place:
+    <pb/><fw>Hello</fw>
+    <pb/><fw place="whatever">Hello</fw>
+</p>
+    
+<p>
+    Using several consecutive fw elements is possible:
+    <pb/>
+        <fw place="top">Hello</fw>
+        <fw place="bottom">Hello</fw>
+</p>
+
+<p>
+    Use of both label and fw after milestones. The label must immediately follow the milestone.
+    <pb/>
+    <label>My label</label>
+    <fw place="top">Hello</fw>
+    <fw place="bottom">Hello</fw>
+</p>
+
 </div>
 
     </body></text>
