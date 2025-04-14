@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
+<teiHeader>
+    <fileDesc>
+        <titleStmt>
+            <title>Test bibliographic references</title>
+            <respStmt>
+                <resp>so many</resp>
+                <persName ref="part:mime">
+                    <forename>Michaël</forename>
+                    <surname>Meyer</surname>
+                </persName>
+            </respStmt>
+        </titleStmt>
+        <publicationStmt>
+            <authority>DHARMA</authority>
+            <pubPlace>Paris</pubPlace>
+        </publicationStmt>
+        <sourceDesc>
+            <msDesc>
+                <msIdentifier>
+                    <repository>DHARMAbase</repository>
+                    <idno/>
+                </msIdentifier>
+            </msDesc>
+        </sourceDesc>
+    </fileDesc>
+</teiHeader>
+<text xml:space="preserve"><body>
+
+<div type="edition" xml:lang="eng">
+
+<div type="textpart"><head>Missing bib:prefix</head>
+<p>
+	The bib: prefix is mandatory in theory, but we still deal properly with
+	@target that don't have it, so the following produce the same result:
+
+	<bibl><ptr target="bib:Test_Article"/></bibl>
+	<bibl><ptr target="Test_Article"/></bibl>
+	<bibl><ref target="bib:Test_Article"/></bibl>
+	<bibl><ref target="Test_Article"/></bibl>
+</p>
+</div>
+
+<div type="textpart"><head>Bibliographic pointers which point to an entry within the div[@type='bibliography']</head>
+<p>
+	<bibl><ptr target="bib:Test_Article"/></bibl>
+	<bibl><ref target="bib:Test_Article"/></bibl>
+
+	<bibl rend="default"><ptr target="bib:Test_Article"/></bibl>
+	<bibl rend="default"><ref target="bib:Test_Article"/></bibl>
+
+	<bibl rend="ibid"><ptr target="bib:Test_Article"/></bibl>
+	<bibl rend="ibid"><ref target="bib:Test_Article"/></bibl>
+
+	<bibl rend="omitname"><ptr target="bib:Test_Article"/></bibl>
+	<bibl rend="omitname"><ref target="bib:Test_Article"/></bibl>
+
+	<bibl rend="siglum"><ptr target="bib:Test_Article"/></bibl>
+	<bibl rend="siglum"><ref target="bib:Test_Article"/></bibl>
+
+	<bibl rend="invalidvalue"><ptr target="bib:Test_Article"/></bibl>
+	<bibl rend="invalidvalue"><ref target="bib:Test_Article"/></bibl>
+</p>
+</div>
+
+<div type="textpart"><head>Bibliographic references with a non-empty bib pointer</head>
+<p>
+	If the ptr or ref is non-empty, we display its contents instead of the usual author+year. But we only do that if @rend="default" viz. with no @rend:
+
+	<bibl><ptr target="bib:Test_Article">hello</ptr></bibl>
+	<bibl><ref target="bib:Test_Article">hello</ref></bibl>
+
+	<bibl rend="default"><ptr target="bib:Test_Article">hello</ptr></bibl>
+	<bibl rend="default"><ref target="bib:Test_Article">hello</ref></bibl>
+
+	<bibl rend="ibid"><ptr target="bib:Test_Article">hello</ptr></bibl>
+	<bibl rend="ibid"><ref target="bib:Test_Article">hello</ref></bibl>
+
+	<bibl rend="omitname"><ptr target="bib:Test_Article">hello</ptr></bibl>
+	<bibl rend="omitname"><ref target="bib:Test_Article">hello</ref></bibl>
+
+	<bibl rend="siglum"><ptr target="bib:Test_Article">hello</ptr></bibl>
+	<bibl rend="siglum"><ref target="bib:Test_Article">hello</ref></bibl>
+
+	<bibl rend="invalidvalue"><ptr target="bib:Test_Article">hello</ptr></bibl>
+	<bibl rend="invalidvalue"><ref target="bib:Test_Article">hello</ref></bibl>
+</p>
+</div>
+
+<div type="textpart"><head>References to the project-wide bibliography</head>
+<p>References to an entry that is present in the project-wide bibliography but
+	that is not present in the div[@type='bibliography']. Links should point to the project-wide bibliography:
+
+	<bibl><ptr target="bib:Griffiths2012_02"/></bibl>
+	<bibl><ref target="bib:Griffiths2012_02"/></bibl>
+
+	<!--This one has no siglum, we should default to author+year-->
+	<bibl rend="siglum"><ref target="bib:Griffiths2012_02"/></bibl>
+</p>
+</div>
+
+<div type="textpart"><head>Invalid links</head>
+<p>Bibliographic pointers with an empty @target. All the following should produce the same thing:
+
+	<bibl/>
+
+	<bibl><ptr/></bibl>
+	<bibl><ref/></bibl>
+
+	<bibl rend="default"><ptr/></bibl>
+	<bibl rend="default"><ref/></bibl>
+
+	<bibl rend="ibid"><ptr/></bibl>
+	<bibl rend="ibid"><ref/></bibl>
+
+	<bibl rend="omitname"><ptr/></bibl>
+	<bibl rend="omitname"><ref/></bibl>
+
+	<bibl rend="siglum"><ptr/></bibl>
+	<bibl rend="siglum"><ref/></bibl>
+
+	<bibl rend="invalidvalue"><ptr/></bibl>
+	<bibl rend="invalidvalue"><ref/></bibl>
+
+	<bibl><ptr target="bib:"/></bibl>
+	<bibl><ref target="bib:"/></bibl>
+
+	<bibl rend="default"><ptr target="bib:"/></bibl>
+	<bibl rend="default"><ref target="bib:"/></bibl>
+
+	<bibl rend="ibid"><ptr target="bib:"/></bibl>
+	<bibl rend="ibid"><ref target="bib:"/></bibl>
+
+	<bibl rend="omitname"><ptr target="bib:"/></bibl>
+	<bibl rend="omitname"><ref target="bib:"/></bibl>
+
+	<bibl rend="siglum"><ptr target="bib:"/></bibl>
+	<bibl rend="siglum"><ref target="bib:"/></bibl>
+
+	<bibl rend="invalidvalue"><ptr target="bib:"/></bibl>
+	<bibl rend="invalidvalue"><ref target="bib:"/></bibl>
+</p>
+<p>Reference to an entry that does not exist in our bibliography:
+	<bibl><ptr target="not_in_bibliography"/></bibl>
+	<bibl><ref target="not_in_bibliography"/></bibl>
+</p>
+<p>Reference to an entry with an unsupported item type:
+	<bibl><ptr target="Test_Patent"/></bibl>
+	<bibl><ref target="Test_Patent"/></bibl>
+</p>
+</div>
+
+<div type="textpart"><head>Use of bibliographic units and trailing note</head>
+<p>Single value:
+	X<bibl rend="default"><ref target="bib:Test_Article"/>
+		<citedRange unit="page">33</citedRange>
+	</bibl>X
+</p>
+<p>Two values:
+	X<bibl rend="default"><ref target="bib:Test_Article"/>
+		<citedRange unit="page">33</citedRange>
+		<citedRange unit="item">33</citedRange>
+	</bibl>X
+</p>
+<p>More values:
+	X<bibl rend="default"><ref target="bib:Test_Article"/>
+		<citedRange unit="page">33</citedRange>
+		<citedRange unit="item">33</citedRange>
+		<citedRange unit="note">33</citedRange>
+	</bibl>X
+</p>
+<p>With a non-empty ref:
+	X<bibl rend="default"><ref target="bib:Test_Article">hello</ref>
+		<citedRange unit="page">33</citedRange>
+	</bibl>X
+</p>
+<p>All @unit, singular:
+	X<bibl rend="default"><ref target="bib:Test_Article"/>
+		<citedRange unit="volume">33</citedRange>
+		<citedRange unit="appendix">33</citedRange>
+		<citedRange unit="book">33</citedRange>
+		<citedRange unit="section">33</citedRange>
+		<citedRange unit="page">33</citedRange>
+		<citedRange unit="item">33</citedRange>
+		<citedRange unit="figure">33</citedRange>
+		<citedRange unit="plate">33</citedRange>
+		<citedRange unit="table">33</citedRange>
+		<citedRange unit="note">33</citedRange>
+		<citedRange unit="part">33</citedRange>
+		<citedRange unit="entry">33</citedRange>
+		<citedRange unit="line">33</citedRange>
+		<citedRange unit="mixed">33</citedRange>
+	</bibl>X
+</p>
+<p>All @unit, plural:
+	X<bibl rend="default"><ref target="bib:Test_Article"/>
+		<citedRange unit="volume">33-34</citedRange>
+		<citedRange unit="appendix">33-34</citedRange>
+		<citedRange unit="book">33-34</citedRange>
+		<citedRange unit="section">33-34</citedRange>
+		<citedRange unit="page">33-34</citedRange>
+		<citedRange unit="item">33-34</citedRange>
+		<citedRange unit="figure">33-34</citedRange>
+		<citedRange unit="plate">33-34</citedRange>
+		<citedRange unit="table">33-34</citedRange>
+		<citedRange unit="note">33-34</citedRange>
+		<citedRange unit="part">33-34</citedRange>
+		<citedRange unit="entry">33-34</citedRange>
+		<citedRange unit="line">33-34</citedRange>
+		<citedRange unit="mixed">33-34</citedRange>
+	</bibl>X
+</p>
+<p>With a note:
+	X<bibl rend="default"><ref target="bib:Test_Article"/>
+		<note>Hello world.</note>>
+	</bibl>X
+</p>
+<p>With both citedRangeUnit and note:
+	X<bibl rend="default"><ref target="bib:Test_Article"/>
+		<citedRange unit="mixed">33-34</citedRange>
+		<note>Hello world.</note>
+	</bibl>X
+</p>
+</div>
+
+</div>
+
+<div type="bibliography">
+	<listBibl type="primary">
+		<bibl n="my siglum"><ptr target="bib:Test_Article"/></bibl>
+	</listBibl>
+</div>
+
+</body></text>
+</TEI>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Test Links</title>
+                <respStmt>
+                    <resp>so many</resp>
+                    <persName ref="part:mime">
+                        <forename>Michaël</forename>
+                        <surname>Meyer</surname>
+                    </persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <authority>DHARMA</authority>
+                <pubPlace>Paris</pubPlace>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>DHARMAbase</repository>
+                        <idno/>
+                    </msIdentifier>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:space="preserve"><body>
+
+<div type="edition" xml:lang="san">
+
+<p>ref and ptr have the same purpose and behave the same save for the fact that ref can have contents while ptr cannot. We use the same code for parsing both. Thus, all the following tests exercise identically both elements.</p>
+
+<p>When the ref is empty and has no @target, it should produce nothing at all:
+    A<ref/>B<ptr/>C.</p>
+
+<p>When the ref is empty and has a @target that doesn't point to our website, display this URL in monospace:
+    A<ref target="http://example.com"/>B<ptr target="http://example.com"/>C.</p>
+<p>Idem with another link:
+    A<ref target="ftp://ftp.example.com"/>B<ptr target="ftp://ftp.example.com"/>C.</p>
+
+<p>When the ref is empty and has a @target that points to something on our website, display the shortened path in monospace (the shortened path is either an absolute URL or a text id) and make the generated @href an absolute path (without scheme and domain names):
+    A<ref target="https://dharmalekha.info"/>B<ptr target="https://dharmalekha.info"/>C.</p>
+<p>Idem with another link:
+    A<ref target="https://dharmalekha.info/texts/mytext"/>B<ptr target="https://dharmalekha.info/texts/mytext"/>C.</p>
+<p>Idem with another link:
+    A<ref target="https://dharmalekha.info/texts"/>B<ptr target="https://dharmalekha.info/texts"/>C.</p>
+<p>Idem with another link:
+    A<ref target="https://dharmalekha.info/foo/bar"/>B<ptr target="https://dharmalekha.info/foo/bar"/>C.</p>
+<p>Idem with another link:
+    A<ref target="https://dharmalekha.info/foo/bar/"/>B<ptr target="https://dharmalekha.info/foo/bar/"/>C.</p>
+<p>Idem when the URL doesn't include our domain name (dharmalekha.info); relative paths are resolved relative to the /texts directory:
+    A<ref target="/"/>B<ptr target="/"/>C.</p>
+<p>Idem with another path:
+    A<ref target="mytext"/>B<ptr target="mytext"/>C.</p>
+<p>Idem with another path:
+    A<ref target="/texts"/>B<ptr target="/texts"/>C.</p>
+<p>Idem with another path:
+    A<ref target="/foo/bar"/>B<ptr target="/foo/bar"/>C.</p>
+<p>Idem with another path:
+    A<ref target="/foo/bar/"/>B<ptr target="/foo/bar/"/>C.</p>
+<p>Idem with another path:
+    A<ref target="foo/bar"/>B<ptr target="foo/bar"/>C.</p>
+
+<p>When the ref is not empty and has no @target, its contents should be preserved, even though there is no link:
+    A<ref>A</ref>B<ptr>B</ptr>C.</p>
+
+<p>When the ref is not empty and has a @target, display the ref's contents in a normal font:
+    A<ref target="http://example.com">A</ref>B<ptr target="http://example.com">B</ptr>C.</p>
+<p>Idem with another link:
+    A<ref target="/">A</ref>B<ptr target="/">B</ptr>C.</p>
+<p>Idem with another link:
+    A<ref target="mytext">A</ref>B<ptr target="mytext">B</ptr>C.</p>
+
+</div>
+    </body></text>
+</TEI>
