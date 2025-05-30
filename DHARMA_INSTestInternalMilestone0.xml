@@ -1,0 +1,18 @@
+<TEI>
+    <text xml:space="preserve">
+        <body>
+            <div type="edition">
+
+<div type="textpart">
+    <lg>
+        <l><pb/><lb n="1"/><milestone type="gridlike"/></l>
+        <l><pb/><milestone type="gridlike"/></l>
+        <l><pb/><lb n="1"/></l>
+        <l><pb/><milestone type="gridlike"/></l>
+    </lg>
+</div>
+
+            </div>
+        </body>
+    </text>
+</TEI>

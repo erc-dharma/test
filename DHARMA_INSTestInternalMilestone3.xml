@@ -1,0 +1,15 @@
+<TEI>
+    <text xml:space="preserve">
+        <body>
+            <div type="edition">
+
+<div type="textpart">
+    <lg>
+        <l><lb n="1"/>Hello</l>
+    </lg>
+</div>
+
+            </div>
+        </body>
+    </text>
+</TEI>
