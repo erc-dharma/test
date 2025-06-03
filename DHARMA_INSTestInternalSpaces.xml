@@ -1,0 +1,29 @@
+<TEI>
+    <text xml:space="preserve">
+        <body>
+            <div type="edition">
+
+<div type="textpart">
+
+    <!-- trim at beginning -->
+    <p> foo</p>
+    <p> <foreign>foo</foreign></p>
+    <p><foreign> foo</foreign></p>
+    <p><foreign><hi rend="bold"> foo</hi></foreign></p>
+
+    <!-- trim at end -->
+    <p>foo </p>
+    <p><foreign>foo </foreign></p>
+    <p><foreign>foo</foreign> </p>
+    <p><foreign><hi rend="bold">foo </hi></foreign> </p>
+
+    <!-- empty nodes must be deleted, recursively (but not milestones) -->
+     <p> <span> </span> </p>
+     <p> <lb/> </p>
+
+</div>
+
+            </div>
+        </body>
+    </text>
+</TEI>
