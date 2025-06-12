@@ -1,29 +1,38 @@
 <TEI>
     <text xml:space="preserve">
         <body>
-            <div type="edition">
 
-<div type="textpart">
+<div type="translation">
+    <!--Consecutive spaces should be folded into a single ' '-->
+    <p>foo
+    bar</p>
 
-    <!-- trim at beginning -->
+    <!--Spaces within span and link tags. They must be transferred to the
+    parent node.-->
+    <p>foo <foreign>bar</foreign> baz</p>
+    <p>foo<foreign> bar</foreign> baz</p>
+    <p>foo <foreign>bar </foreign>baz</p>
+    <p>foo <foreign> bar </foreign>baz</p>
+
+    <!--Spaces around milestones. Should be deleted.-->
+    <p>foo <pb/> bar</p>
+    <p>foo <lb/> bar</p>
+    <p>foo <milestone type="gridlike"/> bar</p>
+    <!--Spaces before <note> must be deleted, but not spacesz after <note>.-->
+    <p>foo <note>my note</note> bar</p>
+
+    <!--Spaces within other elements. They must be deleted.-->
+    <p>foo</p>
     <p> foo</p>
-    <p> <foreign>foo</foreign></p>
-    <p><foreign> foo</foreign></p>
-    <p><foreign><hi rend="bold"> foo</hi></foreign></p>
-
-    <!-- trim at end -->
     <p>foo </p>
-    <p><foreign>foo </foreign></p>
-    <p><foreign>foo</foreign> </p>
-    <p><foreign><hi rend="bold">foo </hi></foreign> </p>
+    <p> foo </p>
 
-    <!-- empty nodes must be deleted, recursively (but not milestones) -->
-     <p> <span> </span> </p>
-     <p> <lb/> </p>
+    <!--Empty elements must be removed (except milestones and the doc root)-->
+    <p> foo <note/> bar </p>
+    <p> foo <note> </note> bar </p>
 
 </div>
 
-            </div>
         </body>
     </text>
 </TEI>
