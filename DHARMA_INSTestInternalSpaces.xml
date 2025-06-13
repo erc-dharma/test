@@ -14,11 +14,10 @@
     <p>foo <foreign>bar </foreign>baz</p>
     <p>foo <foreign> bar </foreign>baz</p>
 
-    <!--Spaces around milestones. Should be deleted.-->
-    <p>foo <pb/> bar</p>
-    <p>foo <lb/> bar</p>
-    <p>foo <milestone type="gridlike"/> bar</p>
-    <!--Spaces before <note> must be deleted, but not spacesz after <note>.-->
+    <!--Spaces around elements must be removed, except around inlines (span,
+    link) and after a <note>.-->
+    <p>foo <foreign>bar</foreign> baz</p>
+    <!--Spaces before <note> must be deleted, but not spaces after <note>.-->
     <p>foo <note>my note</note> bar</p>
 
     <!--Spaces within other elements. They must be deleted.-->
