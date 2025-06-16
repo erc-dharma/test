@@ -102,7 +102,7 @@
     <pb/><fw>Hello</fw>
     <pb/><fw place="whatever">Hello</fw>
 </p>
-    
+
 <p>
     Using several consecutive fw elements is possible:
     <pb/>
@@ -116,6 +116,29 @@
     <label>My label</label>
     <fw place="top">Hello</fw>
     <fw place="bottom">Hello</fw>
+</p>
+
+<p>Space handling. If the milestone has @break=no, all spaces around it are
+removed. But if not, we modify the text in such a way that there is one space
+(and only one) around each milestone. Except that, if the milestone appears at
+the very beginning of a block, we don't add a space before it.</p>
+<p>
+    <pb n="P"/>
+    <lb n="L"/>
+    <milestone unit="face" type="gridlike" n="C"/>
+    <pb n="P" break="no"/>
+    <lb n="L" break="no"/>
+    <milestone unit="face" type="gridlike" n="C" break="no"/>
+    done!
+</p>
+<p>
+    <pb n="P" break="no"/>
+    <lb n="L" break="no"/>
+    <milestone unit="face" type="gridlike" n="C" break="no"/>
+    <pb n="P" break="no"/>
+    <lb n="L" break="no"/>
+    <milestone unit="face" type="gridlike" n="C" break="no"/>
+    done!
 </p>
 
 </div>
