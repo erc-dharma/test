@@ -1,0 +1,14 @@
+<TEI>
+    <text>
+        <body>
+            <div type="edition">
+    <!--The output text should be 'A B'-->
+    <p>A</p>
+    <p>B</p>
+    <!--The output text should be 'AB' (no spaces between A and B)-->
+    <p>A</p>
+    <p><milestone break="no"/>B</p>
+            </div>
+        </body>
+    </text>
+</TEI>
