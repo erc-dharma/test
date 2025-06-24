@@ -2,20 +2,25 @@
     <text>
         <body>
             <div type="edition">
-<div type="textpart">
-    <!--line break within a span; the span is split in pieces-->
-    <p>
-        A<foreign>B<hi rend="bold">C<hi rend="check">D</hi>E<lb n="l1"/>F<hi rend="check">G</hi>H</hi>I</foreign>J
-    </p>
-    <!--page break within a span-->
-    <p>
-        A<foreign>B<hi rend="bold">C<hi rend="check">D</hi>E<pb n="p1"/>F<hi rend="check">G</hi>H</hi>I</foreign>J
-    </p>
-    <!--nothing happens for cells-->
-    <p>
-        A<foreign>B<hi rend="bold">C<hi rend="check">D</hi>E<milestone n="c1"/>F<hi rend="check">G</hi>H</hi>I</foreign>J
-    </p>
-</div>
+
+<!--line break within a span; the span is split in pieces-->
+<p>
+    A<foreign>B<hi rend="bold">C<hi rend="check">D</hi>E<lb n="l1"/>F<hi rend="check">G</hi>H</hi>I</foreign>J
+</p>
+<!--page break within a span-->
+<p>
+    A<foreign>B<hi rend="bold">C<hi rend="check">D</hi>E<pb n="p1"/>F<hi rend="check">G</hi>H</hi>I</foreign>J
+</p>
+<!--nothing happens for cells-->
+<p>
+    A<foreign>B<hi rend="bold">C<hi rend="check">D</hi>E<milestone n="c1"/>F<hi rend="check">G</hi>H</hi>I</foreign>J
+</p>
+
+    <!--several breaks within a span result in 3+ discrete segments-->
+<p>
+    <lb n="0"/><foreign>A<lb n="1"/>B<lb n="2"/>C</foreign>
+</p>
+
             </div>
         </body>
     </text>

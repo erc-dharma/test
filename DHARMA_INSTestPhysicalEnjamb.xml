@@ -1,0 +1,34 @@
+<TEI>
+    <text>
+        <body>
+            <div type="edition">
+
+<!--foo bar-->
+<lg>
+    <l>foo</l>
+    <l>bar</l>
+</lg>
+
+<!--foo bar-->
+<lg>
+    <l enjamb="no">foo</l>
+    <l>bar</l>
+</lg>
+
+<!--foobar-->
+<lg>
+    <l enjamb="yes">foo</l>
+    <l>bar</l>
+</lg>
+
+<!--This encoding is incorrect. The result must be "foo bar". And the @break
+produced on the second verse-line should have @break="yes"-->
+<lg>
+    <l>foo</l>
+    <l enjamb="yes">bar</l>
+</lg>
+
+            </div>
+        </body>
+    </text>
+</TEI>
