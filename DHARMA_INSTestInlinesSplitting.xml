@@ -1,0 +1,22 @@
+<TEI>
+    <text>
+        <body>
+            <div type="edition">
+<div type="textpart">
+    <!--line break within a span; the span is split in pieces-->
+    <p>
+        A<foreign>B<hi rend="bold">C<hi rend="check">D</hi>E<lb n="l1"/>F<hi rend="check">G</hi>H</hi>I</foreign>J
+    </p>
+    <!--page break within a span-->
+    <p>
+        A<foreign>B<hi rend="bold">C<hi rend="check">D</hi>E<pb n="p1"/>F<hi rend="check">G</hi>H</hi>I</foreign>J
+    </p>
+    <!--nothing happens for cells-->
+    <p>
+        A<foreign>B<hi rend="bold">C<hi rend="check">D</hi>E<milestone n="c1"/>F<hi rend="check">G</hi>H</hi>I</foreign>J
+    </p>
+</div>
+            </div>
+        </body>
+    </text>
+</TEI>
