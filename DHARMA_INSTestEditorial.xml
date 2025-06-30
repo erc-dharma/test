@@ -118,18 +118,24 @@
 
 </p></div>
 
-<div type="textpart"><head>seg</head><p>
-
-	<seg rend="check">a</seg>
-	<seg rend="pun">a</seg>
-	<seg rend="check pun">a</seg>
+<div type="textpart"><head>seg</head>
 
 <p>
-Peculiar case for seg[gap]: 
+<seg rend="check">a</seg>
+<seg rend="pun">a</seg>
+<seg rend="check pun">a</seg>
+</p>
+<p>
+Peculiar case for seg[gap]:
 foo<seg met="+++-++"><gap reason="lost" quantity="6" unit="character"/></seg>bar.
-</p> 
+Likewise but with a named meter:
+foo<seg met="nagakusuma"><gap reason="lost" quantity="6" unit="character"/></seg>
+The following should produce the same output:
+foo<seg met="invalidvalue"><gap reason="lost" quantity="6" unit="character"/></seg>bar.
+foo<seg><gap reason="lost" quantity="6" unit="character"/></seg>bar.
+</p>
 
-</p></div>
+</div>
 
 </div>
 
