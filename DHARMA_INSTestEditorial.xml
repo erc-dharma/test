@@ -1,34 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Test Emendations</title>
-                <respStmt>
-                    <resp>so many</resp>
-                    <persName ref="part:mime">
-                        <forename>Michaël</forename>
-                        <surname>Meyer</surname>
-                    </persName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>DHARMA</authority>
-                <pubPlace>Paris</pubPlace>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <repository>DHARMAbase</repository>
-                        <idno/>
-                    </msIdentifier>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-    </teiHeader>
-    <text xml:space="preserve"><body>
+<TEI>
+    <text><body>
 
 <div type="edition" xml:lang="san">
 
@@ -128,8 +99,10 @@
 <p>
 Peculiar case for seg[gap]:
 foo<seg met="+++-++"><gap reason="lost" quantity="6" unit="character"/></seg>bar.
+
 Likewise but with a named meter:
 foo<seg met="nagakusuma"><gap reason="lost" quantity="6" unit="character"/></seg>
+
 The following should produce the same output:
 foo<seg met="invalidvalue"><gap reason="lost" quantity="6" unit="character"/></seg>bar.
 foo<seg><gap reason="lost" quantity="6" unit="character"/></seg>bar.
