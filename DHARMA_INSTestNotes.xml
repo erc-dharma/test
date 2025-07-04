@@ -1,39 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Test notes within the edition div</title>
-                <respStmt>
-                    <resp>so many</resp>
-                    <persName ref="part:mime">
-                        <forename>Michaël</forename>
-                        <surname>Meyer</surname>
-                    </persName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>DHARMA</authority>
-                <pubPlace>Paris</pubPlace>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <repository>DHARMAbase</repository>
-                        <idno/>
-                    </msIdentifier>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-    </teiHeader>
-    <text xml:space="preserve"><body>
+<TEI>
+    <text><body>
 
-<div type="edition" xml:lang="san" rendition="class:00000 maturity:00000">
-
-<p>A footnote follows<note>My footnote.</note> here.</p>
-
+<div type="edition">
+    <p>A footnote follows<note>My footnote. Clicking on the footnote number
+    should bring us back to the footnote mark above, whatever the display.
+    </note>here. It should bear the same number in all displays.</p>
+    <p>Spaces before notes are removed. The following should thus have the same
+    display: foo <note>Hello</note>bar foo<note>Hello</note>bar</p>
+    <p>Spaces after notes are preserved, thus: foo<note>Hello</note> bar.</p>
+    <p>But no spaces are added after notes: foo<note>Hello</note>bar.</p>
+</div>
+<div type="apparatus">
+    <listApp>
+        <app loc="1">
+            <lem>lemma</lem>
+            <note>Apparatus note.<note>Footnote within an apparatus note.</note></note>
+        </app>
+    </listApp>
+</div>
+<div type="translation">
+    <p>Footnote<note>Hello.</note>elsewhere.</p>
 </div>
 
     </body></text>
