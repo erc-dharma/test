@@ -1,0 +1,54 @@
+<!--In some situations, it is necessary to shift milestones to a nearby
+document.-->
+
+<TEI>
+    <text><body>
+
+<div type="edition">
+
+<div type="textpart"><head>verse</head>
+<lg>
+	<pb n="A"/>
+	<l>hello</l>
+</lg>
+<lg>
+	<l>hello</l>
+	<pb n="B"/>
+</lg>
+<lg>
+	<pb n="C"/>
+</lg>
+</div>
+
+<div type="textpart"><head>list</head>
+<list>
+	<pb n="A"/>
+	<item>hello</item>
+</list>
+<list>
+	<item>hello</item>
+	<pb n="B"/>
+</list>
+<list>
+	<pb n="C"/>
+</list>
+</div>
+
+<div type="textpart"><head>dlist</head>
+<list>
+	<pb n="A"/>
+	<label>key</label><item>hello</item>
+</list>
+<list>
+	<label>key</label><item>hello</item>
+	<pb n="B"/>
+</list>
+<list>
+	<pb n="C"/>
+</list>
+</div>
+
+</div>
+
+    </body></text>
+</TEI>
