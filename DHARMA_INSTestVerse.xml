@@ -1,34 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="/home/michael/dharma/schemas/inscription.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="eng">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title>Test Verse</title>
-                <respStmt>
-                    <resp>so many</resp>
-                    <persName ref="part:mime">
-                        <forename>Michaël</forename>
-                        <surname>Meyer</surname>
-                    </persName>
-                </respStmt>
-            </titleStmt>
-            <publicationStmt>
-                <authority>DHARMA</authority>
-                <pubPlace>Paris</pubPlace>
-            </publicationStmt>
-            <sourceDesc>
-                <msDesc>
-                    <msIdentifier>
-                        <repository>DHARMAbase</repository>
-                        <idno/>
-                    </msIdentifier>
-                </msDesc>
-            </sourceDesc>
-        </fileDesc>
-    </teiHeader>
-    <text xml:space="preserve"><body>			
+<TEI>
+    <text><body>
 
 <div type="edition" xml:lang="san" rendition="class:00000 maturity:00000">
 
@@ -152,15 +123,27 @@ When l/@n is empty, we don't print anything.
     <l>This meter does not have any pattern. In this case, we still add a link to the
     prosody table, but we do not show anything in the tooltip.</l>
 </lg>
+<p>We have three special values for @met:</p>
+<lg met="mixed">
+    <l>hello</l>
+</lg>
+<lg met="free">
+    <l>hello</l>
+</lg>
+<lg met="uncertain">
+    <l>hello</l>
+</lg>
+<p>Other values for @met:</p>
 <lg met="foobar">
-    <l>This meter does not appear in prosody. We only show its name in this case.</l>
+    <l>This meter does not appear in prosody. We only show its name in this case
+    (and capitalize it).</l>
 </lg>
 <lg met="+=-2-6/||++12|">
     <l>This meter is an XML pattern. It should be converted to a prosody pattern.
     There should be some space between letters, but double daṇḍas (||) and groups of
     digits (12) should be kept together.</l>
 </lg>
-    
+
 </div>
 
 <div type="textpart"><head>Use of @met and @real with l</head>
@@ -182,8 +165,8 @@ When l/@n is empty, we don't print anything.
 </lg>
 
 </div>
-    
+
 </div>
-    
+
     </body></text>
 </TEI>
