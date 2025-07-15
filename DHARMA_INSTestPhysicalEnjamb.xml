@@ -3,19 +3,21 @@
         <body>
             <div type="edition">
 
-<!--foo bar-->
+<!--For testing how we deal @enjamb in the physical display.-->
+
+<!--Output must be: foo bar-->
 <lg>
     <l>foo</l>
     <l>bar</l>
 </lg>
 
-<!--foo bar-->
+<!--Output must be: foo bar-->
 <lg>
     <l enjamb="no">foo</l>
     <l>bar</l>
 </lg>
 
-<!--foobar-->
+<!--Output must be: foobar-->
 <lg>
     <l enjamb="yes">foo</l>
     <l>bar</l>
