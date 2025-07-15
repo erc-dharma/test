@@ -30,6 +30,8 @@
     </teiHeader>
     <text xml:space="preserve"><body>
 
+<!--Relevant discussion: https://github.com/erc-dharma/project-documentation/issues/269-->
+
 <div type="edition" xml:lang="san">
 
 <p>
@@ -44,7 +46,7 @@
 </p>
 
 <p>
-    Use of milestone/@n:
+    Use of milestone/@n. Dashes (-) should be replaced with EN-dashes (Arlo's request); note that this might produce weird results in some cases.
     <milestone n="A"/>
     <milestone type="pagelike" n="A"/>
     <pb n="A"/>
@@ -55,7 +57,8 @@
 </p>
 
 <p>
-    Trailing label after a milestone:
+    Trailing label after a milestone. Should work for all types of milestones
+    and also when @n is not given.
     <milestone type="gridlike"/><label>My label</label>
     <milestone type="pagelike"/><label>My label</label>
     <pb/><label>My label</label>
@@ -116,29 +119,6 @@
     <label>My label</label>
     <fw place="top">Hello</fw>
     <fw place="bottom">Hello</fw>
-</p>
-
-<p>Space handling. If the milestone has @break=no, all spaces around it are
-removed. But if not, we modify the text in such a way that there is one space
-(and only one) around each milestone. Except that, if the milestone appears at
-the very beginning of a block, we don't add a space before it.</p>
-<p>
-    <pb n="P"/>
-    <lb n="L"/>
-    <milestone unit="face" type="gridlike" n="C"/>
-    <pb n="P" break="no"/>
-    <lb n="L" break="no"/>
-    <milestone unit="face" type="gridlike" n="C" break="no"/>
-    done!
-</p>
-<p>
-    <pb n="P" break="no"/>
-    <lb n="L" break="no"/>
-    <milestone unit="face" type="gridlike" n="C" break="no"/>
-    <pb n="P" break="no"/>
-    <lb n="L" break="no"/>
-    <milestone unit="face" type="gridlike" n="C" break="no"/>
-    done!
 </p>
 
 </div>
