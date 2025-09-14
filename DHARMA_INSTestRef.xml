@@ -28,7 +28,7 @@
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    <text xml:space="preserve"><body>			
+    <text><body>
 
 <div type="edition" xml:lang="eng">
     <p>
@@ -39,7 +39,7 @@
         <ref target="/people/argr">hello</ref>
         <ref target="https://michaelmeyer.fr">hello</ref>
     </p>
-    
+
     <p>
         <ref target="DHARMA_INSTest%20Filename.xml"/>
         <ref target="DHARMA_INSTest%20Filename"/>
@@ -48,7 +48,7 @@
         <ref target="/people/argr"/>
         <ref target="https://michaelmeyer.fr"/>
     </p>
-    
+
     <p>
         <ref target="http://dharmalekha.info/texts/DHARMA_INSTest%20Filename"/>
         <ref target="http://dharmalekha.info/people/argr"/>
@@ -59,6 +59,6 @@
         <ref target="https://dharmalekha.info:623/people/argr">foobar</ref>
     </p>
 </div>
-    
+
 </body></text>
 </TEI>
