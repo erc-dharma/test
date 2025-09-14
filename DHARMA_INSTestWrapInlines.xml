@@ -1,0 +1,34 @@
+<!--Division-like containers (to wit, <summary> and such, <note>, all <div>
+might contain inline elements (text, spans, notes and milestones). If this
+happens, we must wrap these inline elements within a paragraph.-->
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <sourceDesc>
+                <msDesc>
+                    <msContents>
+                        <summary>
+                            foo <p>bar</p> baz <foreign>qux</foreign>
+                        </summary>
+                    </msContents>
+                    <physDesc>
+                        <handDesc>
+                            foo <p>bar</p> baz <foreign>qux</foreign>
+                        </handDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div type="edition">
+                foo <p>bar</p> baz <foreign>qux</foreign>
+                <note>foo <p>bar</p> baz <foreign>qux</foreign></note>
+                <div type="textpart">
+                    foo <p>bar</p> baz <foreign>qux</foreign>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>
