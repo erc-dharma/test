@@ -162,6 +162,27 @@ Foreign stuff as <foreign>this is foreign</foreign> end.
     <q rend="block">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</q>
 </p>
 
+<p>This is a block quote with several paragraphs:
+    <quote rend="block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </quote>
+</p>
+
+<p>This is a block quote with various elements:
+    <quote rend="block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <lg>
+            <l>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</l>
+            <l>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</l>
+        </lg>
+        <quote rend="block">
+            <p>This is an inner quotation.</p>
+        </quote>
+        <p>iti</p>
+    </quote>
+</p>
+
 <p>This is an inline quotation: <cit><quote>Hello world</quote>
     <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
 </cit>.
@@ -172,7 +193,7 @@ Foreign stuff as <foreign>this is foreign</foreign> end.
 </cit>.
 </p>
 
-<p>This is an inline quotation with a reference: <cit><quote rend="block">Hello world.</quote>
+<p>This is an inline quotation with a reference: <cit><quote>Hello world.</quote>
     <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
 </cit>
 </p>
@@ -185,6 +206,16 @@ Foreign stuff as <foreign>this is foreign</foreign> end.
 <p>This is a block quotation with a reference: <cit><quote rend="block">Hello world.</quote>
     <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
 </cit>
+</p>
+
+<p>This is a block quotation with several paragraphs and with a reference:
+    <cit>
+    <quote rend="block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </quote>
+    <bibl><ptr target="bib:Eltschinger2001_01"/></bibl>
+    </cit>
 </p>
 
 </div>
