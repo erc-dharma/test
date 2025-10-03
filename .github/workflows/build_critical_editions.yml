@@ -14,7 +14,7 @@ jobs:
           for f in editions/*.xml; do
             out=`basename $f`
             out=`echo $out | sed 's,\.xml$,.html,g'`
-            java -jar /usr/share/java/Saxon-HE.jar -xsl:start_v02.xsl -s:$f > tmp || continue
+            java -jar /usr/share/java/Saxon-HE.jar -xsl:project-documentation/stylesheets/criticalEditions/start_v02.xsl -s:$f > tmp || continue
             mv tmp html/$out
           done
           git config user.name github-actions
