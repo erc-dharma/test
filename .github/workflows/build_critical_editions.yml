@@ -7,9 +7,9 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 1
-      - run:|
+      - run: |
         sudo apt install -y libsaxonhe-java
-        git clone --depth=1 git@github.com:erc-dharma/project-documentation.git
+        git clone --depth=1 git@github.com:erc-dharma/project-documentation.git;
         test -d html || mkdir html
         for f in editions/*.xml; do
           out=$(echo `basename $f` | sed 's,\.xml$,.html')
