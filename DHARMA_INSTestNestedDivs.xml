@@ -1,0 +1,25 @@
+<TEI>
+    <text>
+        <body>
+
+<!-- Nested divs are not allowed in epidoc (there are two levels at most: one
+for "edition", etc.; a second one for "textpart"). But they should still work in
+our system, because it is necessary for editions of manuscripts. -->
+<div type="edition">
+    <div n="A">
+        <p>Foo</p>
+        <div n="B">
+            <p>Foo</p>
+            <div n="C">
+                <p>Foo</p>
+                <div n="D">
+                    <p>Foo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </body>
+    </text>
+</TEI>
