@@ -14,6 +14,12 @@ our system, because it is necessary for editions of manuscripts. -->
                 <p>Foo</p>
                 <div n="D">
                     <p>Foo</p>
+                    <div n="E">
+                        <p>Foo</p>
+                        <div n="F">
+                            <p>Foo</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
