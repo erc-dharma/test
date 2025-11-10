@@ -1,5 +1,5 @@
 <!--In some situations, it is necessary to shift milestones to a nearby
-element.-->
+element. -->
 
 <TEI>
     <text><body>
@@ -9,42 +9,39 @@ element.-->
 <div type="textpart"><head>verse</head>
 <lg>
 	<pb n="A"/>
-	<l>hello</l>
-</lg>
-<lg>
-	<l>hello</l>
+	<lb n="A*"/>
+	<l>foo</l>
 	<pb n="B"/>
-</lg>
-<lg>
+	<lb n="B*"/>
+	<l>bar</l>
 	<pb n="C"/>
+	<lb n="C*"/>
 </lg>
 </div>
 
-<div type="textpart"><head>list</head>
+<div type="textpart"><head>elist</head>
 <list>
 	<pb n="A"/>
-	<item>hello</item>
-</list>
-<list>
-	<item>hello</item>
+	<lb n="A*"/>
+	<item>foo</item>
 	<pb n="B"/>
-</list>
-<list>
+	<lb n="B*"/>
+	<item>bar</item>
 	<pb n="C"/>
+	<lb n="C*"/>
 </list>
 </div>
 
 <div type="textpart"><head>dlist</head>
 <list>
 	<pb n="A"/>
-	<label>key</label><item>hello</item>
-</list>
-<list>
-	<label>key</label><item>hello</item>
+	<lb n="A*"/>
+	<label>foo</label>
 	<pb n="B"/>
-</list>
-<list>
+	<lb n="B*"/>
+	<item>bar</item>
 	<pb n="C"/>
+	<lb n="C*"/>
 </list>
 </div>
 
