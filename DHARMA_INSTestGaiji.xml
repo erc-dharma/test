@@ -31,28 +31,52 @@
     <text><body>
 
 <div type="edition" xml:lang="san">
+
 <p>
+    Testing of g[@type="numeral"]:
 	<!-- These should produce the same output -->
 	<g type="numeral">34</g>
 	<g type="numeral">3/4</g>
 	<g type="numeral">3⁄4</g>
 	<g type="numeral">¾</g>
-
 	<!-- These should produce the same output -->
 	<g type="numeral">294303/23920</g>
 	<g type="numeral">294303⁄23920</g>
+</p>
 
-	<!-- Symbol in the gaiji table -->
+<p>
+    Testing of tooltips:
+    <g type="alphabetic" ref="tax:unclassified">foo</g>
+    <g type="connector" ref="tax:unclassified">foo</g>
+    <g type="ideogram" ref="tax:unclassified">foo</g>
+    <!-- "numeral" should not have a tooltip -->
+    <g type="numeral" ref="tax:unclassified">foo</g>
+    <g type="symbol" ref="tax:unclassified">foo</g>
+    <g type="pc" ref="tax:unclassified">foo</g>
+    <g ref="tax:unclassified">foo</g>
+    <!-- Tooltip of a symbol not in the taxonomy -->
+    <g type="symbol" ref="tax:ffibueifbuzi">foo</g>
+</p>
+
+<p>
+    Tests for checking what text the g element is replaced with:
+    <g type="ideogram" ref="tax:symbolwithmapping">foo</g>
+    <g type="ideogram" ref="tax:symbolwithmapping"></g>
+    <g type="ideogram" ref="tax:symbolwithoutmappingbutwithname"></g>
+    <g type="ideogram" ref="tax:symbolnotinthetaxonomy"></g>
+    <g type="symbol" ref="tax:symbolnotinthetaxonomy"></g>
+    <g ref="tax:symbolnotinthetaxonomy"></g>
+</p>
+
+<p>
+    Tests legacy encoding:
+    <!-- The output should be the same for these two -->
 	<g type="floret"></g>
-	<g type="floret">.</g>
-	<g type="floret">§</g>
-	<g type="floret">§§§</g>
-
-	<!-- Symbol not in the gaiji table -->
+	<g type="floret">foo</g>
+	<!-- Symbol not in the gaiji table; the output should be the same for these
+    two -->
 	<g type="myUnknownSymbol"></g>
-	<g type="myUnknownSymbol">.</g>
-	<g type="myUnknownSymbol">§</g>
-	<g type="myUnknownSymbol">§§§</g>
+	<g type="myUnknownSymbol">foo</g>
 </p>
 </div>
 
