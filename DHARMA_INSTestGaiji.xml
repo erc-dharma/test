@@ -46,26 +46,26 @@
 
 <p>
     Testing of tooltips:
-    <g type="alphabetic" ref="tax:unclassified">foo</g>
-    <g type="connector" ref="tax:unclassified">foo</g>
-    <g type="ideogram" ref="tax:unclassified">foo</g>
+    <g type="alphabetic" ref="sym:unclassified">foo</g>
+    <g type="connector" ref="sym:unclassified">foo</g>
+    <g type="ideogram" ref="sym:unclassified">foo</g>
     <!-- "numeral" should not have a tooltip -->
-    <g type="numeral" ref="tax:unclassified">foo</g>
-    <g type="symbol" ref="tax:unclassified">foo</g>
-    <g type="pc" ref="tax:unclassified">foo</g>
-    <g ref="tax:unclassified">foo</g>
+    <g type="numeral" ref="sym:unclassified">foo</g>
+    <g type="symbol" ref="sym:unclassified">foo</g>
+    <g type="pc" ref="sym:unclassified">foo</g>
+    <g ref="sym:unclassified">foo</g>
     <!-- Tooltip of a symbol not in the taxonomy -->
-    <g type="symbol" ref="tax:ffibueifbuzi">foo</g>
+    <g type="symbol" ref="sym:ffibueifbuzi">foo</g>
 </p>
 
 <p>
-    Tests for checking what text the g element is replaced with:
-    <g type="ideogram" ref="tax:symbolwithmapping">foo</g>
-    <g type="ideogram" ref="tax:symbolwithmapping"></g>
-    <g type="ideogram" ref="tax:symbolwithoutmappingbutwithname"></g>
-    <g type="ideogram" ref="tax:symbolnotinthetaxonomy"></g>
-    <g type="symbol" ref="tax:symbolnotinthetaxonomy"></g>
-    <g ref="tax:symbolnotinthetaxonomy"></g>
+    Tests for checking what text the g element is replaced with.
+    <g type="ideogram" ref="sym:symbolwithmapping">foo</g>
+    <g type="ideogram" ref="sym:symbolwithmapping"></g>
+    <g type="ideogram" ref="sym:symbolwithoutmappingbutwithname"></g>
+    <g type="ideogram" ref="sym:symbolnotinthetaxonomy"></g>
+    <g type="symbol" ref="sym:symbolnotinthetaxonomy"></g>
+    <g ref="sym:symbolnotinthetaxonomy"></g>
 </p>
 
 <p>
