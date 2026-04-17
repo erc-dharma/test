@@ -78,6 +78,47 @@
 	<g type="myUnknownSymbol"></g>
 	<g type="myUnknownSymbol">foo</g>
 </p>
+
+
+<p>ref present and token has mapping: display the mapping, ignore content -
+    &lt;g ref="sym:doubleBar"&gt;.&lt;/g&gt; -
+    <g ref="sym:doubleBar">.</g></p>
+<p>ref present and token has mapping: display the mapping, ignore content and type -
+    &lt;g type="connector" ref="sym:doubleBar"&gt;|&lt;/g&gt; -
+    <g type="connector" ref="sym:doubleBar">|</g></p>
+<p>ref present, no mapping: display the name, ignore content  -
+    &lt;g ref="sym:san-srivatsa"&gt;|&lt;/g&gt; -
+    <g ref="sym:san-srivatsa">|</g></p>
+<p>ref present, no mapping: display the name, ignore content and type -
+    &lt;g type="punctuation" ref="sym:san-srivatsa"&gt;|&lt;/g&gt; -
+    <g type="punctuation" ref="sym:san-srivatsa">|</g></p>
+<p>no mapping, no name: show content -
+    &lt;g&gt;%&lt;/g&gt; -
+    <g>%</g> <hi rend="check">desired: %</hi></p>
+<p>no mapping, no name: show content, ignore type -
+    &lt;g type="punctuation"&gt;%&lt;/g&gt; -
+    <g type="punctuation">%</g> <hi rend="check">desired: %</hi></p>
+<p>no mapping, no name: show content, ignore type-
+    &lt;g type="ideogram"&gt;%&lt;/g&gt; -
+    <g type="ideogram">%</g> <hi rend="check">desired: %</hi></p>
+<p>no mapping, no name, no content: show default placeholder based on type -
+    &lt;g type="symbol"&gt;&lt;/g&gt; -
+    <g type="symbol"/></p>
+<p>no mapping, no name, no content: show default placeholder based on type -
+    &lt;g&gt;.&lt;/g&gt; -
+    <g/></p>
+<p>no mapping, no name, no content: show default placeholder based on type -
+    &lt;g type="ideogram"&gt;&lt;/g&gt; -
+    <g type="ideogram"/> <hi rend="check">desired: @</hi></p>
+<p>no mapping, no name, no content: show default placeholder based on type -
+    &lt;g type="punctuation"&gt;&lt;/g&gt; -
+    <g type="punctuation"/> <hi rend="check">desired: .</hi></p>
+<p>no mapping, no name, no content: show default placeholder based on type -
+    &lt;g type="connector"&gt;&lt;/g&gt; -
+    <g type="connector"/> <hi rend="check">desired: §</hi></p>
+
+
+
 </div>
 
     </body></text>
