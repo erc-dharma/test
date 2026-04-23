@@ -61,22 +61,22 @@
 <p>
     Tests for checking what text the g element is replaced with.
     <g type="ideogram" ref="sym:symbolwithmapping">foo</g>
-    <g type="ideogram" ref="sym:symbolwithmapping"></g>
-    <g type="ideogram" ref="sym:symbolwithoutmappingbutwithname"></g>
-    <g type="ideogram" ref="sym:symbolnotinthetaxonomy"></g>
-    <g type="symbol" ref="sym:symbolnotinthetaxonomy"></g>
-    <g ref="sym:symbolnotinthetaxonomy"></g>
+    <g type="ideogram" ref="sym:symbolwithmapping"/>
+    <g type="ideogram" ref="sym:symbolwithoutmappingbutwithname"/>
+    <g type="ideogram" ref="sym:symbolnotinthetaxonomy"/>
+    <g type="symbol" ref="sym:symbolnotinthetaxonomy"/>
+    <g ref="sym:symbolnotinthetaxonomy"/>
 </p>
 
 <p>
     Tests legacy encoding:
     <!-- The output should be the same for these two -->
-	<g type="floret"></g>
-	<g type="floret">foo</g>
+	<g ref="sym:floret" type="symbol">*</g>
+	<g ref="sym:floret">foo</g>
 	<!-- Symbol not in the gaiji table; the output should be the same for these
     two -->
-	<g type="myUnknownSymbol"></g>
-	<g type="myUnknownSymbol">foo</g>
+	<g ref="sym:myUnknownSymbol"/><!--CHECK SYMBOL encoding and content-->
+	<g ref="sym:myUnknownSymbol">foo</g><!--CHECK SYMBOL encoding and content-->
 </p>
 
 
@@ -97,25 +97,25 @@
     <g>%</g> <hi rend="check">desired: %</hi></p>
 <p>no mapping, no name: show content, ignore type -
     &lt;g type="punctuation"&gt;%&lt;/g&gt; -
-    <g type="punctuation">%</g> <hi rend="check">desired: %</hi></p>
+    <g ref="sym:punctuation">%</g><!--CHECK SYMBOL encoding and content--> <hi rend="check">desired: %</hi></p>
 <p>no mapping, no name: show content, ignore type-
     &lt;g type="ideogram"&gt;%&lt;/g&gt; -
-    <g type="ideogram">%</g> <hi rend="check">desired: %</hi></p>
+    <g ref="sym:ideogram">%</g> <hi rend="check">desired: %</hi></p>
 <p>no mapping, no name, no content: show default placeholder based on type -
     &lt;g type="symbol"&gt;&lt;/g&gt; -
-    <g type="symbol"/></p>
+    <g/></p>
 <p>no mapping, no name, no content: show default placeholder based on type -
     &lt;g&gt;.&lt;/g&gt; -
     <g/></p>
 <p>no mapping, no name, no content: show default placeholder based on type -
     &lt;g type="ideogram"&gt;&lt;/g&gt; -
-    <g type="ideogram"/> <hi rend="check">desired: @</hi></p>
+    <g ref="sym:ideogram"/> <hi rend="check">desired: @</hi></p>
 <p>no mapping, no name, no content: show default placeholder based on type -
     &lt;g type="punctuation"&gt;&lt;/g&gt; -
-    <g type="punctuation"/> <hi rend="check">desired: .</hi></p>
+    <g ref="sym:punctuation" type="punctuation">.</g><!--CHECK SYMBOL encoding and content--> <hi rend="check">desired: .</hi></p>
 <p>no mapping, no name, no content: show default placeholder based on type -
     &lt;g type="connector"&gt;&lt;/g&gt; -
-    <g type="connector"/> <hi rend="check">desired: §</hi></p>
+    <g ref="sym:connector"/> <hi rend="check">desired: §</hi></p>
 
 
 

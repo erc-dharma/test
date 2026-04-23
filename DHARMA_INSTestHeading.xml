@@ -34,12 +34,12 @@
 	<!-- Tests of textpart headings -->
 
 	<!-- The 2 following lines should use "part" (default value of @subtype) -->
-	<div type="textpart"></div>
-	<div type="textpart" n="A"></div>
-	<div type="textpart" subtype="column"></div>
-	<div type="textpart" subtype="column" n="A"></div>
-	<div type="textpart" subtype="any subtype works"></div>
-	<div type="textpart" subtype="any subtype works" n="A"></div>
+	<div type="textpart"/>
+	<div type="textpart" n="A"/>
+	<div type="textpart" subtype="column"/>
+	<div type="textpart" subtype="column" n="A"/>
+	<div type="textpart" subtype="any subtype works"/>
+	<div type="textpart" subtype="any subtype works" n="A"/>
 
 	<!-- When a heading is given, it completely replaces the heading we would
 	generate otherwise, thus the following should just print "My title". -->
@@ -58,19 +58,19 @@
 
 <!-- All div types have a computer-generated heading ("Edition", "Apparatus", "Translation by X", etc.). But this heading can be overwritten by adding a <head> element immediately after the heading. The guide talks about this for @type='translation' and @type='textpart', but we also make it work for all other div types. -->
 
-<div type="translation"></div>
+<div type="translation"/>
 
-<div type="translation" xml:lang="deu"></div>
-<div type="translation" xml:lang="deu" resp="part:mime"></div>
-<div type="translation" xml:lang="deu" resp="part:mime part:emfr"></div>
-<div type="translation" xml:lang="deu" resp="part:mime part:emfr part:argr"></div>
-<div type="translation" xml:lang="deu" source="bib:Eltschinger2001_01"></div>
+<div type="translation" xml:lang="deu"/>
+<div type="translation" xml:lang="deu" resp="part:mime"/>
+<div type="translation" xml:lang="deu" resp="part:mime part:emfr"/>
+<div type="translation" xml:lang="deu" resp="part:mime part:emfr part:argr"/>
+<div type="translation" xml:lang="deu" source="bib:Eltschinger2001_01"/>
 
-<div type="translation" resp="part:mime"></div>
-<div type="translation" xml:lang="eng" resp="part:mime"></div>
-<div type="translation" resp="part:mime part:emfr"></div>
-<div type="translation" resp="part:mime part:emfr part:argr"></div>
-<div type="translation" source="bib:Eltschinger2001_01"></div>
+<div type="translation" resp="part:mime"/>
+<div type="translation" xml:lang="eng" resp="part:mime"/>
+<div type="translation" resp="part:mime part:emfr"/>
+<div type="translation" resp="part:mime part:emfr part:argr"/>
+<div type="translation" source="bib:Eltschinger2001_01"/>
 
 <div type="translation"><head>My title</head></div>
 

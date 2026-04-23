@@ -215,7 +215,7 @@
 </p>
 <p>With a note:
 	X<bibl rend="default"><ref target="bib:Test_Article"/>
-		<note>Hello world.</note>>
+		<note>Hello world.</note>&gt;
 	</bibl>X
 </p>
 <p>With both citedRangeUnit and note:
