@@ -36,6 +36,12 @@
         <bibl><ptr target="Test_Journal_abbr_2"/></bibl>
         <bibl><ptr target="Test_Journal_abbr_3"/></bibl>
     </listBibl>
+
+    <!--@type="surrogates" is a magic value. Children <bibl> elements are treated as free text instead of structured data (as is the case for other types of listBilb). See https://github.com/erc-dharma/project-documentation/issues/423-->
+    <listBibl type="surrogates">
+        <bibl><ptr target="Test_Journal_abbr_2"/></bibl>
+        <bibl>Foo <ptr target="Test_Journal_abbr_2"/> Bar</bibl>
+    </listBibl>
 </div>
 
 </body></text>
