@@ -1,0 +1,15 @@
+<TEI>
+    <text><body>
+
+<div type="edition">
+    foobar
+    <note>note 1
+        <note>note 2</note>
+    foobar
+    </note>
+    foobar
+    <note>note 3</note>
+</div>
+
+    </body></text>
+</TEI>
