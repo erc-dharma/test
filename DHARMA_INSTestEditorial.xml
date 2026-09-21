@@ -79,15 +79,22 @@
 
 </p></div>
 
-<div type="textpart"><head>abbr</head><p>
+<div type="textpart"><head>abbr</head>
 
+<p>
 	<abbr>a</abbr>
 	<ex>a</ex>
 	<am>a</am>
 	<abbr>a<am>b</am>c</abbr>
 	<expan><abbr>aug<am>g</am></abbr><ex>usti duo</ex></expan>
+</p>
+<p>
+	<expan><abbr>mā</abbr><ex>ṣa</ex></expan>
+	<expan><ex>jā</ex><abbr>k·</abbr> </expan> tandoṅ
+	<expan><abbr>I</abbr><ex>raṇṭu</ex><abbr>m</abbr></expan>
+</p>
 
-</p></div>
+</div>
 
 <div type="textpart"><head>seg</head>
 
